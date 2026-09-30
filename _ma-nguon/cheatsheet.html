@@ -5,37 +5,39 @@
 @font-face{font-family:BVP;src:url(file:///root/.fonts/BeVietnamPro-500.ttf);font-weight:500}
 @font-face{font-family:BVP;src:url(file:///root/.fonts/BeVietnamPro-700.ttf);font-weight:700}
 @font-face{font-family:BVP;src:url(file:///root/.fonts/BeVietnamPro-800.ttf);font-weight:800}
+@font-face{font-family:PF;src:url(file:///root/.fonts/Playfair-0-500.ttf);font-weight:500}
+@font-face{font-family:PF;src:url(file:///root/.fonts/Playfair-1-500.ttf);font-weight:500;font-style:italic}
 @page{size:A4;margin:0}
 *{box-sizing:border-box}
-body{margin:0;font-family:BVP,sans-serif;color:#1F4E47;background:#fff}
+body{margin:0;font-family:BVP,sans-serif;color:#1B1F24;background:#F7F5F0}
 .page{width:210mm;height:297mm;padding:10mm 12mm 8mm;display:flex;flex-direction:column;gap:3.2mm}
 .top{display:flex;justify-content:space-between;align-items:flex-end}
-h1{margin:0;font-size:26pt;font-weight:800;line-height:1}
-.pill{background:#F2B134;font-weight:800;font-size:9pt;padding:2mm 4mm;border-radius:99px;display:inline-block}
-h2{margin:0 0 2mm;font-size:12.5pt;font-weight:800}
-.box{background:rgba(31,78,71,.08);border-radius:4mm;padding:3.2mm 3.6mm}
-.dark{background:#1F4E47;color:#fff}.dark h2{color:#F2B134}
-.yel{background:#F2B134}
+h1{margin:0;font-family:PF,serif;font-size:28pt;font-weight:500;line-height:1}
+.pill{color:#A67C3D;font-weight:500;font-size:8pt;letter-spacing:.25em;display:inline-block}
+h2{margin:0 0 2mm;font-family:PF,serif;font-size:13pt;font-weight:500}
+.box{background:transparent;border:.3mm solid rgba(27,31,36,.18);border-radius:1mm;padding:3.2mm 3.6mm}
+.dark{background:#1B1F24;color:#F7F5F0;border-color:#1B1F24}.dark h2{color:#A67C3D}
+.yel{border-color:#A67C3D}
 .g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4mm}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3mm}
 .g6{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5mm}
-.chip{background:#fff;border-radius:3mm;padding:2.5mm 3mm;font-size:9pt;line-height:1.35}
-.chip b{display:block;font-size:10pt}
+.chip{background:#fff;border-radius:1mm;padding:2.5mm 3mm;font-size:9pt;line-height:1.35}
+.chip b{display:block;font-size:10pt;font-weight:500;color:#A67C3D}
 p,li{font-size:9.2pt;line-height:1.4;margin:0}
 ul{margin:0;padding-left:4.5mm}
-.mono{background:#fff;border-radius:3mm;padding:3mm;font-size:9pt;line-height:1.5}
+.mono{background:#fff;border-radius:1mm;padding:3mm;font-size:9pt;line-height:1.5}
 table{width:100%;border-collapse:collapse;font-size:9pt}
-td{padding:1mm 2mm;border-bottom:.3mm solid rgba(31,78,71,.2);vertical-align:top}
+td{padding:1mm 2mm;border-bottom:.3mm solid rgba(27,31,36,.2);vertical-align:top}
 td:first-child{font-weight:700;width:36%}
 .steps{display:flex;gap:2.5mm}
-.steps div{flex:1;background:#fff;border-radius:3mm;padding:2.5mm;font-size:9pt;text-align:center}
+.steps div{flex:1;background:#F7F5F0;border-radius:1mm;padding:2.5mm;font-size:9pt;text-align:center}
 .steps b{display:block;font-size:13pt}
 .foot{margin-top:auto;font-size:8pt;display:flex;justify-content:space-between}
 </style></head><body><div class="page">
 <div class="top"><div><span class="pill">THẺ TRA NHANH · DẠY CÙNG AI</span><h1 style="margin-top:3mm">Viết câu lệnh cho AI</h1></div><div style="font-size:10pt;font-weight:700;text-align:right">In ra · dán cạnh máy tính<br>Mầm non · Tiểu học · THCS</div></div>
 
 <div class="box dark"><h2>Vòng làm việc 4 bước</h2>
-<div class="steps" style="color:#1F4E47"><div><b>1 · Hỏi</b>Gõ câu lệnh rõ ràng</div><div><b>2 · Đọc</b>Đọc hết câu trả lời</div><div><b>3 · Sửa</b>Gõ tiếp yêu cầu sửa</div><div style="background:#F2B134"><b>4 · Kiểm</b>Đối chiếu SGK, nguồn</div></div></div>
+<div class="steps" style="color:#1B1F24"><div><b>1 · Hỏi</b>Gõ câu lệnh rõ ràng</div><div><b>2 · Đọc</b>Đọc hết câu trả lời</div><div><b>3 · Sửa</b>Gõ tiếp yêu cầu sửa</div><div style="background:#1B1F24;color:#F7F5F0;border:.3mm solid #A67C3D"><b>4 · Kiểm</b>Đối chiếu SGK, nguồn</div></div></div>
 
 <div class="box"><h2>6 mảnh ghép của câu lệnh tốt</h2>
 <div class="g6">

@@ -1,10 +1,10 @@
 # Bộ tài liệu "Dạy cùng AI"
 
-Sổ tay thực hành AI cho giáo viên Mầm non, Tiểu học, THCS. Ba màu dùng chung: xanh bảng `#1F4E47`, vàng bút chì `#F2B134`, trắng `#FFFFFF`.
+Sổ tay thực hành AI cho giáo viên Mầm non, Tiểu học, THCS. Phong cách tối giản, ba màu dùng chung: mực than `#1B1F24`, ngà `#F7F5F0`, đồng nhũ `#A67C3D` (chỉ làm điểm nhấn). Tiêu đề dùng chữ có chân (Playfair Display trong hình, Cambria trong Word và PowerPoint).
 
 | Thư mục | Nội dung |
 |---|---|
-| `01-Sach` | Sách chính (Word và PDF, 38 trang A4): 40 bài, 51 câu lệnh mẫu, 12 bảng đổi câu lệnh theo 3 cấp học |
+| `01-Sach` | Sách chính (Word và PDF, 39 trang A4): 40 bài, 51 câu lệnh mẫu, 12 bảng đổi câu lệnh theo 3 cấp học |
 | `02-Slide` | Slide giới thiệu (PowerPoint và PDF, 23 slide, có ghi chú người nói) |
 | `03-Anh-ban-hang` | 3 ảnh đăng bán 1080×1350 |
 | `04-Huong-dan-truoc-khi-dung` | Hướng dẫn chuyên sâu trước khi sử dụng (Word và PDF) |

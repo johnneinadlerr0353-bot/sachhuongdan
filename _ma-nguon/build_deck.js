@@ -1,8 +1,8 @@
 // Slide giới thiệu sách. 3 màu: xanh bảng, vàng bút chì, trắng.
 const pptxgen = require('pptxgenjs');
 const path = require('path');
-const G = '1F4E47', Y = 'F2B134', W = 'FFFFFF';
-const F = 'Arial';
+const G = '1B1F24', Y = 'A67C3D', W = 'F7F5F0';
+const F = 'Arial', SF = 'Cambria';
 const pres = new pptxgen();
 pres.layout = 'LAYOUT_16x9'; // 10 x 5.625
 pres.title = 'Dạy cùng AI';
@@ -19,12 +19,12 @@ function imageSlide(name, notes) {
 
 function divider(kicker, title, sub, n) {
   const s = pres.addSlide();
-  s.background = { color: Y };
-  s.addShape(pres.shapes.OVAL, { x: 6.9, y: 1.1, w: 3.4, h: 3.4, fill: { color: G } });
-  T(s, n, { x: 6.9, y: 1.1, w: 3.4, h: 3.4, fontSize: 120, bold: true, color: Y, align: 'center', valign: 'middle' });
-  T(s, kicker, { x: 0.6, y: 1.3, w: 6, h: 0.4, fontSize: 16, bold: true, charSpacing: 4 });
-  T(s, title, { x: 0.6, y: 1.8, w: 6, h: 1.6, fontSize: 40, bold: true, valign: 'top' });
-  T(s, sub, { x: 0.6, y: 3.5, w: 5.8, h: 1, fontSize: 16, valign: 'top' });
+  s.background = { color: W };
+  s.addShape(pres.shapes.OVAL, { x: 6.6, y: 1.1, w: 3.2, h: 3.2, fill: { color: W }, line: { color: Y, width: 1 } });
+  T(s, n, { x: 6.6, y: 1.1, w: 3.2, h: 3.2, fontSize: 110, fontFace: SF, italic: true, color: Y, align: 'center', valign: 'middle' });
+  T(s, kicker, { x: 0.6, y: 1.3, w: 6, h: 0.4, fontSize: 12, color: Y, charSpacing: 8 });
+  T(s, title, { x: 0.6, y: 1.8, w: 5.8, h: 1.6, fontSize: 38, fontFace: SF, valign: 'top' });
+  T(s, sub, { x: 0.6, y: 3.6, w: 5.6, h: 1, fontSize: 13, valign: 'top' });
   return s;
 }
 
@@ -32,11 +32,10 @@ function divider(kicker, title, sub, n) {
 {
   const s = pres.addSlide();
   s.background = { color: G };
-  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 0.6, w: 2.3, h: 0.42, fill: { color: Y }, rectRadius: 0.2 });
-  T(s, 'SỔ TAY THỰC HÀNH', { x: 0.6, y: 0.6, w: 2.3, h: 0.42, fontSize: 13, bold: true, align: 'center', valign: 'middle' });
-  T(s, 'DẠY CÙNG AI', { x: 0.6, y: 1.3, w: 8.8, h: 1.2, fontSize: 64, bold: true, color: W });
-  T(s, 'Từ câu lệnh đầu tiên đến trợ giảng ảo', { x: 0.6, y: 2.5, w: 8.8, h: 0.6, fontSize: 26, color: Y });
-  T(s, 'Dành cho giáo viên Mầm non · Tiểu học · THCS', { x: 0.6, y: 4.3, w: 8.8, h: 0.4, fontSize: 18, color: W, bold: true });
+  T(s, 'SỔ TAY THỰC HÀNH', { x: 0.6, y: 0.7, w: 5, h: 0.4, fontSize: 12, color: Y, charSpacing: 10 });
+  T(s, 'Dạy cùng AI', { x: 0.6, y: 1.3, w: 8.8, h: 1.2, fontSize: 66, fontFace: SF, color: W });
+  T(s, 'Từ câu lệnh đầu tiên đến trợ giảng ảo', { x: 0.6, y: 2.55, w: 8.8, h: 0.6, fontSize: 24, fontFace: SF, italic: true, color: Y });
+  T(s, 'Dành cho giáo viên Mầm non · Tiểu học · THCS', { x: 0.6, y: 4.3, w: 8.8, h: 0.4, fontSize: 13, color: W, charSpacing: 6 });
   T(s, 'Không cần biết trước về AI. Làm theo từng bước là dùng được.', { x: 0.6, y: 4.75, w: 8.8, h: 0.4, fontSize: 14, color: W });
   s.addNotes('Giới thiệu: sách viết cho người chưa từng dùng AI. Mỗi bài đọc trong 5 phút, có câu lệnh sao chép nguyên văn và phiên bản đổi sẵn cho 3 cấp học.');
 }
@@ -45,14 +44,14 @@ function divider(kicker, title, sub, n) {
 {
   const s = pres.addSlide();
   s.background = { color: W };
-  T(s, 'Sau cuốn sách, thầy cô tự làm được', { x: 0.6, y: 0.45, w: 8.8, h: 0.7, fontSize: 30, bold: true });
+  T(s, 'Sau cuốn sách, thầy cô tự làm được', { x: 0.6, y: 0.5, w: 8.8, h: 0.7, fontSize: 30, fontFace: SF });
   const items = [['1', 'Soạn bài', 'Giáo án góc trạm, STEM, bài giảng 10 slide'], ['2', 'Ra đề', 'Tự luận, trắc nghiệm theo ma trận, rubric'], ['3', 'Làm học liệu', 'Ảnh, trò chơi, truyện tranh, bài hát, giọng đọc'], ['4', 'Tạo trợ giảng', 'Chatbot ôn tập không đưa đáp án ngay']];
   items.forEach(([n, t, d], i) => {
     const x = 0.6 + i * 2.25;
-    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 1.5, w: 2.05, h: 3.4, fill: { color: i === 3 ? G : 'E9EFEE' }, rectRadius: 0.15 });
-    s.addShape(pres.shapes.OVAL, { x: x + 0.25, y: 1.75, w: 0.7, h: 0.7, fill: { color: Y } });
-    T(s, n, { x: x + 0.25, y: 1.75, w: 0.7, h: 0.7, fontSize: 24, bold: true, align: 'center', valign: 'middle' });
-    T(s, t, { x: x + 0.25, y: 2.6, w: 1.7, h: 0.8, fontSize: 19, valign: 'top', bold: true, color: i === 3 ? W : G });
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 1.5, w: 2.05, h: 3.4, fill: { color: i === 3 ? G : W }, line: { color: i === 3 ? G : 'CFCAC0', width: 0.75 }, rectRadius: 0.03 });
+    s.addShape(pres.shapes.OVAL, { x: x + 0.25, y: 1.75, w: 0.6, h: 0.6, fill: { color: i === 3 ? G : W }, line: { color: Y, width: 0.75 } });
+    T(s, n, { x: x + 0.25, y: 1.75, w: 0.6, h: 0.6, fontSize: 18, fontFace: SF, color: Y, align: 'center', valign: 'middle' });
+    T(s, t, { x: x + 0.25, y: 2.6, w: 1.7, h: 0.8, fontSize: 19, valign: 'top', fontFace: SF, color: i === 3 ? W : G });
     T(s, d, { x: x + 0.25, y: 3.45, w: 1.65, h: 1.3, fontSize: 13, color: i === 3 ? W : G, valign: 'top' });
   });
   s.addNotes('Bốn nhóm việc tương ứng 4 buổi thực hành: Buổi 1 kỹ thuật câu lệnh, Buổi 2 kiểm tra đánh giá, Buổi 3 đa phương tiện, Buổi 4 Deep Research và chatbot.');
@@ -92,10 +91,10 @@ imageSlide('h16-cap-hoc', 'Gợi ý bắt đầu theo cấp học. Bảng tra đ
 {
   const s = pres.addSlide();
   s.background = { color: G };
-  T(s, 'Bắt đầu ngay hôm nay với 1 câu lệnh', { x: 0.6, y: 0.6, w: 8.8, h: 0.8, fontSize: 32, bold: true, color: W });
-  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 1.7, w: 8.8, h: 1.5, fill: { color: W }, rectRadius: 0.15 });
-  T(s, 'Cho tôi gợi ý bài giảng về chủ đề [bài thầy cô dạy tuần này] cho học sinh [lớp mấy].', { x: 0.9, y: 1.7, w: 8.2, h: 1.5, fontSize: 22, valign: 'middle' });
-  T(s, 'Hỏi  ·  Đọc  ·  Sửa  ·  Kiểm', { x: 0.6, y: 3.6, w: 8.8, h: 0.6, fontSize: 26, bold: true, color: Y });
+  T(s, 'Bắt đầu ngay hôm nay với một câu lệnh', { x: 0.6, y: 0.6, w: 8.8, h: 0.8, fontSize: 28, fontFace: SF, color: W });
+  s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y: 1.7, w: 8.8, h: 1.5, fill: { color: G }, line: { color: Y, width: 0.75 } });
+  T(s, 'Cho tôi gợi ý bài giảng về chủ đề [bài thầy cô dạy tuần này] cho học sinh [lớp mấy].', { x: 0.9, y: 1.7, w: 8.2, h: 1.5, fontSize: 22, fontFace: SF, italic: true, color: W, valign: 'middle' });
+  T(s, 'Hỏi  ·  Đọc  ·  Sửa  ·  Kiểm', { x: 0.6, y: 3.6, w: 8.8, h: 0.6, fontSize: 24, fontFace: SF, color: Y });
   T(s, 'Mọi câu lệnh trong khóa học có sẵn trong sách Dạy cùng AI và Thư viện câu lệnh đi kèm.', { x: 0.6, y: 4.4, w: 8.8, h: 0.5, fontSize: 15, color: W });
   s.addNotes('Kết thúc: giao bài tập về nhà là chạy 1 câu lệnh cho bài dạy tuần này và mang kết quả đến buổi sau.');
 }

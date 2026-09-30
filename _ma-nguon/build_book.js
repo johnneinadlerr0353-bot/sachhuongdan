@@ -13,8 +13,8 @@ const OUT = process.argv[3] || 'book.docx';
 const C = require(MODE === 'guide' ? './guide.js' : './content.js');
 const TITLE = MODE === 'library' ? 'Thư viện câu lệnh' : MODE === 'guide' ? 'Hướng dẫn trước khi sử dụng' : 'Dạy cùng AI';
 
-const G = '1F4E47', Y = 'F2B134', W = 'FFFFFF', GT = 'E9EFEE', YT = 'FDF1D8';
-const FONT = 'Arial';
+const G = '1B1F24', Y = 'A67C3D', W = 'FFFFFF', GT = 'F7F5F0', YT = 'FFFFFF';
+const FONT = 'Arial', SERIF = 'Cambria';
 const CW = 9638; // A4 21cm - 2x2cm lề = 17cm = 9638 DXA
 
 // --- chữ có **đậm** ---
@@ -31,7 +31,7 @@ const none = { style: BorderStyle.NONE, size: 0, color: W };
 const noBorders = { top: none, bottom: none, left: none, right: none };
 
 function boxTable(children, fill, border) {
-  const b = border ? { style: BorderStyle.DASHED, size: 6, color: G } : none;
+  const b = border ? { style: BorderStyle.SINGLE, size: 4, color: Y } : none;
   return new Table({
     width: { size: CW, type: WidthType.DXA }, columnWidths: [CW],
     rows: [new TableRow({ cantSplit: true, children: [new TableCell({
@@ -46,7 +46,7 @@ function boxTable(children, fill, border) {
 const spacer = (after = 120) => new Paragraph({ children: [], spacing: { after } });
 
 function label(text, fill = Y, color = G) {
-  return new Paragraph({ spacing: { after: 100 }, children: [new TextRun({ text: ' ' + text + ' ', bold: true, size: 18, color, font: FONT, shading: { type: ShadingType.CLEAR, fill, color: 'auto' } })] });
+  return new Paragraph({ spacing: { after: 100 }, children: [new TextRun({ text, size: 16, color: Y, font: FONT, characterSpacing: 40 })] });
 }
 
 function img(name, caption, widthPx = 560) {
@@ -73,7 +73,7 @@ function promptBox(title, lines) {
 function levelsTable(lv) {
   const rows = [['Mầm non', lv.mn], ['Tiểu học', lv.th], ['THCS', lv.thcs]];
   const w1 = 1700, w2 = CW - w1;
-  const head = new TableRow({ cantSplit: true, children: [new TableCell({ columnSpan: 2, width: { size: CW, type: WidthType.DXA }, shading: { type: ShadingType.CLEAR, fill: Y, color: 'auto' }, borders: noBorders, margins: { top: 80, bottom: 80, left: 200, right: 200 }, children: [new Paragraph({ keepNext: true, children: [new TextRun({ text: 'ĐỔI CHO LỚP CỦA THẦY CÔ', bold: true, size: 18, color: G, font: FONT })] })] })] });
+  const head = new TableRow({ cantSplit: true, children: [new TableCell({ columnSpan: 2, width: { size: CW, type: WidthType.DXA }, shading: { type: ShadingType.CLEAR, fill: W, color: 'auto' }, borders: { ...noBorders, bottom: { style: BorderStyle.SINGLE, size: 4, color: Y } }, margins: { top: 80, bottom: 80, left: 200, right: 200 }, children: [new Paragraph({ keepNext: true, children: [new TextRun({ text: 'ĐỔI CHO LỚP CỦA THẦY CÔ', size: 16, color: Y, font: FONT, characterSpacing: 40 })] })] })] });
   return [new Table({
     width: { size: CW, type: WidthType.DXA }, columnWidths: [w1, w2],
     rows: [head, ...rows.map(([k, v], i) => new TableRow({ cantSplit: true, children: [
@@ -95,22 +95,22 @@ function simpleTable(head, rows) {
 
 function heading1(kicker, title, sub) {
   return [
-    new Paragraph({ spacing: { before: 600, after: 80 }, children: [new TextRun({ text: ' ' + kicker + ' ', bold: true, size: 22, color: G, font: FONT, shading: { type: ShadingType.CLEAR, fill: Y, color: 'auto' } })] }),
-    new Paragraph({ heading: HeadingLevel.HEADING_1, spacing: { after: 120 }, children: [new TextRun({ text: title, bold: true, size: 44, color: G, font: FONT })] }),
+    new Paragraph({ spacing: { before: 600, after: 80 }, children: [new TextRun({ text: kicker, size: 18, color: Y, font: FONT, characterSpacing: 60 })] }),
+    new Paragraph({ heading: HeadingLevel.HEADING_1, spacing: { after: 120 }, children: [new TextRun({ text: title, size: 48, color: G, font: SERIF })] }),
     ...(sub ? [P(sub, { size: 22, italics: true, after: 240 })] : []),
   ];
 }
 function heading2(code, title) {
   return new Paragraph({ heading: HeadingLevel.HEADING_2, keepNext: true, spacing: { before: 360, after: 140 }, children: [
-    new TextRun({ text: ' ' + code + ' ', bold: true, size: 26, color: Y, font: FONT, shading: { type: ShadingType.CLEAR, fill: G, color: 'auto' } }),
-    new TextRun({ text: '  ' + title, bold: true, size: 30, color: G, font: FONT }),
+    new TextRun({ text: code, size: 30, color: Y, font: SERIF, italics: true }),
+    new TextRun({ text: '   ' + title, size: 32, color: G, font: SERIF }),
   ] });
 }
 
 function cover(isLib) {
   return [
-    new Paragraph({ spacing: { before: 1400, after: 200 }, children: [new TextRun({ text: ' SỔ TAY THỰC HÀNH ', bold: true, size: 24, color: G, font: FONT, shading: { type: ShadingType.CLEAR, fill: Y, color: 'auto' } })] }),
-    new Paragraph({ spacing: { after: 120 }, children: [new TextRun({ text: isLib ? 'THƯ VIỆN CÂU LỆNH' : 'DẠY CÙNG AI', bold: true, size: 80, color: G, font: FONT })] }),
+    new Paragraph({ spacing: { before: 1400, after: 200 }, children: [new TextRun({ text: 'SỔ TAY THỰC HÀNH', size: 20, color: Y, font: FONT, characterSpacing: 80 })] }),
+    new Paragraph({ spacing: { after: 120 }, children: [new TextRun({ text: isLib ? 'Thư viện câu lệnh' : 'Dạy cùng AI', size: 88, color: G, font: SERIF })] }),
     new Paragraph({ spacing: { after: 400 }, children: [new TextRun({ text: isLib ? 'Toàn bộ câu lệnh trong sách, sẵn để sao chép' : 'Từ câu lệnh đầu tiên đến trợ giảng ảo', size: 36, color: G, font: FONT })] }),
     ...img('h01-vong-lam-viec', null, 600),
     new Paragraph({ spacing: { before: 300, after: 80 }, children: [new TextRun({ text: 'Dành cho giáo viên Mầm non · Tiểu học · THCS', bold: true, size: 26, color: G, font: FONT })] }),
@@ -122,10 +122,10 @@ function cover(isLib) {
 
 function howto() {
   const legend = [
-    [GT, 'Ô xanh nhạt · CÂU LỆNH', 'Sao chép nguyên văn, dán vào ô nhập của AI. Phần trong [ ] là chỗ thầy cô thay bằng nội dung của mình.'],
-    [YT, 'Ô vàng nhạt · VÌ SAO', 'Giải thích vì sao câu lệnh dùng những câu chữ đó. Hiểu rồi thì tự viết được câu lệnh mới.'],
-    [W, 'Bảng 3 cấp học', 'Câu lệnh đã đổi sẵn cho Mầm non, Tiểu học, THCS. Chọn dòng của mình.'],
-    [W, 'Ô viền đứt · VÍ DỤ KẾT QUẢ', 'Chỉ để hình dung. Câu trả lời thực tế của AI mỗi lần mỗi khác.'],
+    [GT, 'Ô nền ngà · CÂU LỆNH', 'Sao chép nguyên văn, dán vào ô nhập của AI. Phần trong [ ] là chỗ thầy cô thay bằng nội dung của mình.'],
+    [YT, 'Ô viền mảnh · VÌ SAO', 'Giải thích vì sao câu lệnh dùng những câu chữ đó. Hiểu rồi thì tự viết được câu lệnh mới.'],
+    [GT, 'Bảng 3 cấp học', 'Câu lệnh đã đổi sẵn cho Mầm non, Tiểu học, THCS. Chọn dòng của mình.'],
+    [W, 'Ô viền mảnh, chữ nghiêng · VÍ DỤ KẾT QUẢ', 'Chỉ để hình dung. Câu trả lời thực tế của AI mỗi lần mỗi khác.'],
   ];
   const out = [...heading1('BẮT ĐẦU', 'Cách dùng cuốn sách này', null)];
   out.push(P('Không cần đọc hết từ đầu đến cuối. Mỗi bài được viết để **đọc riêng trong 5 phút** và **làm theo ngay**. Thầy cô chưa từng dùng AI hãy đọc Phần A trước. Thầy cô đã biết dùng có thể mở thẳng **Phụ lục P1** để tìm bài theo việc cần làm.'));
@@ -138,7 +138,7 @@ function howto() {
   out.push(...heading1('MỤC LỤC', 'Các bài trong sách', null));
   for (const b of C) {
     if (b[0] === 'part') out.push(new Paragraph({ spacing: { before: 160, after: 60 }, children: [new TextRun({ text: b[1] + ' · ' + b[2], bold: true, size: 22, color: G, font: FONT })] }));
-    if (b[0] === 'lesson') out.push(new Paragraph({ indent: { left: 360 }, spacing: { after: 20 }, children: [new TextRun({ text: b[1] + '   ', bold: true, size: 20, color: 'B07A12', font: FONT }), new TextRun({ text: b[2], size: 20, color: G, font: FONT })] }));
+    if (b[0] === 'lesson') out.push(new Paragraph({ indent: { left: 360 }, spacing: { after: 20 }, children: [new TextRun({ text: b[1] + '   ', bold: true, size: 20, color: Y, font: FONT }), new TextRun({ text: b[2], size: 20, color: G, font: FONT })] }));
   }
   out.push(new Paragraph({ children: [new PageBreak()] }));
   return out;
@@ -149,8 +149,8 @@ function render(block) {
   switch (t) {
     case 'cover': return cover(false);
     case 'cover2': return [
-      new Paragraph({ spacing: { before: 1400, after: 200 }, children: [new TextRun({ text: ' BỘ TÀI LIỆU DẠY CÙNG AI ', bold: true, size: 24, color: G, font: FONT, shading: { type: ShadingType.CLEAR, fill: Y, color: 'auto' } })] }),
-      new Paragraph({ spacing: { after: 160 }, children: [new TextRun({ text: a[0], bold: true, size: 64, color: G, font: FONT })] }),
+      new Paragraph({ spacing: { before: 1400, after: 200 }, children: [new TextRun({ text: 'BỘ TÀI LIỆU DẠY CÙNG AI', size: 20, color: Y, font: FONT, characterSpacing: 80 })] }),
+      new Paragraph({ spacing: { after: 160 }, children: [new TextRun({ text: a[0], size: 60, color: G, font: SERIF })] }),
       new Paragraph({ spacing: { after: 400 }, children: [new TextRun({ text: a[1], size: 30, color: G, font: FONT })] }),
       ...img('h02-khung-chat', null, 600),
       new Paragraph({ spacing: { before: 300 }, children: [new TextRun({ text: 'Đọc tài liệu này trước khi mở sách. Khoảng 15 phút.', bold: true, size: 24, color: G, font: FONT })] }),
@@ -163,10 +163,10 @@ function render(block) {
     case 'img': return img(a[0], a[1]);
     case 'pb': return [new Paragraph({ children: [new PageBreak()] })];
     case 'prompt': return promptBox(a[0], a[1]);
-    case 'why': return [boxTable([label('VÌ SAO · ' + a[0].toUpperCase(), G, Y), P(a[1], { size: 21, after: 0 })], YT), spacer(160)];
+    case 'why': return [boxTable([label('VÌ SAO · ' + a[0].toUpperCase(), G, Y), P(a[1], { size: 21, after: 0 })], YT, true), spacer(160)];
     case 'example': return [boxTable([label('VÍ DỤ KẾT QUẢ · câu trả lời thực tế của AI sẽ khác', GT), ...a[0].map(l => P(l, { size: 20, italics: true, after: 40 }))], W, true), spacer(160)];
     case 'levels': return levelsTable(a[0]);
-    case 'tip': return [new Paragraph({ spacing: { after: 160, line: 300 }, indent: { left: 200 }, children: [new TextRun({ text: 'MẸO  ', bold: true, color: 'B07A12', size: 20, font: FONT }), ...runs(a[0], { size: 21 })] })];
+    case 'tip': return [new Paragraph({ spacing: { after: 160, line: 300 }, indent: { left: 200 }, children: [new TextRun({ text: 'MẸO  ', bold: true, color: Y, size: 20, font: FONT }), ...runs(a[0], { size: 21 })] })];
     case 'steps': { const inst = ++listCount; return [...a[0].map(s => new Paragraph({ numbering: { reference: 'steps', level: 0, instance: inst }, spacing: { after: 80, line: 290 }, children: runs(s) })), spacer(80)]; }
     case 'bullets': return [...a[0].map(s => new Paragraph({ numbering: { reference: 'bul', level: 0 }, spacing: { after: 80, line: 290 }, children: runs(s) })), spacer(80)];
     case 'checklist': return [...a[0].map(s => new Paragraph({ numbering: { reference: 'chk', level: 0 }, spacing: { after: 100, line: 290 }, children: runs(s) })), spacer(80)];
@@ -202,8 +202,8 @@ const doc = new Document({
   styles: {
     default: { document: { run: { font: FONT, size: 22, color: G } } },
     paragraphStyles: [
-      { id: 'Heading1', name: 'Heading 1', basedOn: 'Normal', next: 'Normal', quickFormat: true, run: { font: FONT, size: 44, bold: true, color: G }, paragraph: { outlineLevel: 0 } },
-      { id: 'Heading2', name: 'Heading 2', basedOn: 'Normal', next: 'Normal', quickFormat: true, run: { font: FONT, size: 30, bold: true, color: G }, paragraph: { outlineLevel: 1 } },
+      { id: 'Heading1', name: 'Heading 1', basedOn: 'Normal', next: 'Normal', quickFormat: true, run: { font: SERIF, size: 48, color: G }, paragraph: { outlineLevel: 0 } },
+      { id: 'Heading2', name: 'Heading 2', basedOn: 'Normal', next: 'Normal', quickFormat: true, run: { font: SERIF, size: 32, color: G }, paragraph: { outlineLevel: 1 } },
     ],
   },
   numbering,
