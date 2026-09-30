@@ -65,7 +65,7 @@ python3 sales6.py && node render.js sales_html sales_png
 
 ## Ảnh đăng bán
 
-6 ảnh xếp theo câu người mua tự hỏi: Cái gì? → Có đúng quy định không? → Mình có làm được không? → Có hợp lớp mình không? → Mua về nhận được gì? → Mua có an toàn không? Ảnh 2, 3, 4 là trang chụp nguyên văn từ sách, có ghi số trang.
+6 ảnh xếp theo câu người mua tự hỏi: (1) Cái gì? (2) Có đúng quy định không? (3) Mình có làm được không? (4) Có hợp lớp mình không? (5) Mua về nhận được gì? (6) Mua có an toàn không? Ảnh 2, 3, 4 là trang chụp nguyên văn từ sách, có ghi số trang.
 
 ## Căn cứ biên soạn
 

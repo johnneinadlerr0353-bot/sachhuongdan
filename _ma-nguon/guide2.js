@@ -50,8 +50,8 @@ module.exports = [
 ['section', 'MỤC 4', 'Ba việc giữ an toàn, làm trước khi dán tài liệu vào AI'],
 ['h3', 'Việc 1. Tắt chế độ dùng cuộc trò chuyện để huấn luyện AI'],
 ['steps', [
-  '**ChatGPT:** bấm ảnh đại diện ở góc → **Cài đặt** → **Kiểm soát dữ liệu** → tắt mục **Cải thiện mô hình cho mọi người**.',
-  '**Gemini:** bấm **Cài đặt và trợ giúp** → **Hoạt động** → chọn tắt lưu hoạt động nếu thầy cô không muốn lưu.',
+  '**ChatGPT:** bấm ảnh đại diện ở góc màn hình, chọn **Cài đặt**, chọn tiếp **Kiểm soát dữ liệu**, sau đó tắt mục **Cải thiện mô hình cho mọi người**.',
+  '**Gemini:** bấm **Cài đặt và trợ giúp**, chọn **Hoạt động**, sau đó chọn tắt lưu hoạt động nếu thầy cô không muốn lưu.',
   'Tên mục có thể khác đôi chút. Thầy cô gõ hỏi chính công cụ đó: "Làm sao tắt việc dùng dữ liệu trò chuyện của tôi để huấn luyện?"',
 ]],
 ['h3', 'Việc 2. Không dán thông tin cá nhân của học sinh'],

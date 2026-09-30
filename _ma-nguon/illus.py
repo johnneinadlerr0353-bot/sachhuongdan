@@ -51,11 +51,8 @@ items.append(page("h01-vong-lam-viec", f"""
  <h1>AI là <span class="hl">trợ lý</span>. Thầy cô vẫn là <span class="hl">người quyết định</span>.</h1>
  <div class="row" style="margin-top:24px;align-items:stretch;flex:1">
   <div class="card"><div class="num">1</div><div class="t">Hỏi</div><div class="d">Thầy cô gõ câu lệnh (prompt): nói rõ mình cần gì.</div></div>
-  <div class="arrow">›</div>
   <div class="card"><div class="num">2</div><div class="t">Đọc</div><div class="d">AI trả lời trong vài giây. Đọc hết một lượt.</div></div>
-  <div class="arrow">›</div>
   <div class="card"><div class="num">3</div><div class="t">Sửa</div><div class="d">Chưa ưng? Gõ tiếp yêu cầu để AI sửa lại.</div></div>
-  <div class="arrow">›</div>
   <div class="card dark"><div class="num">4</div><div class="t">Kiểm</div><div class="d">Đối chiếu SGK, chương trình. Chỉ dùng khi đã đúng.</div></div>
  </div>
  <div class="foot">Quy tắc nhớ nhanh: HỎI · ĐỌC · SỬA · KIỂM</div>
@@ -73,7 +70,7 @@ items.append(page("h02-khung-chat", f"""
    <div><b>3</b> Nút sao chép: chép câu trả lời sang Word.</div>
    <div><b>4</b> Dấu <b>+</b> hoặc kẹp giấy: đính kèm tệp, ảnh.</div>
    <div><b>5</b> Ô nhập: gõ hoặc dán câu lệnh vào đây.</div>
-   <div><b>6</b> Nút gửi (mũi tên): bấm để gửi.</div>
+   <div><b>6</b> Nút gửi: bấm để gửi (máy thật thường vẽ hình mũi tên).</div>
   </div>
  </div>
  <div style="flex:1;height:760px;border:4px solid {G};border-radius:32px;display:flex;overflow:hidden;position:relative">
@@ -91,7 +88,7 @@ items.append(page("h02-khung-chat", f"""
    <div style="margin-top:auto;border:3px solid {G};border-radius:26px;padding:18px 18px;display:flex;align-items:center;gap:14px;position:relative">
     <div style="width:44px;height:44px;border-radius:50%;border:3px solid {G};display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800">+</div>
     <div style="flex:1;font-size:21px;opacity:.6">Nhập câu lệnh của thầy cô...</div>
-    <div style="width:52px;height:52px;border-radius:50%;background:{G};color:{Y};display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800">↑</div>
+    <div style="width:52px;height:52px;border-radius:50%;background:{G};color:{Y};display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800">Gửi</div>
     <span class="num" style="position:absolute;left:-10px;top:-40px;width:48px;height:48px;font-size:24px">4</span>
     <span class="num" style="position:absolute;left:300px;top:-40px;width:48px;height:48px;font-size:24px">5</span>
     <span class="num" style="position:absolute;right:-10px;top:-40px;width:48px;height:48px;font-size:24px">6</span>
@@ -138,7 +135,6 @@ items.append(page("h05-truoc-sau", f"""
   <div class="card" style="flex:1"><div class="pill" style="align-self:flex-start;background:{GT2}">TRƯỚC</div>
    <div class="d" style="font-size:27px">Tìm cho tôi 3 nguyên nhân chính gây ra ô nhiễm không khí ở các thành phố lớn để sử dụng trong bài thuyết trình.</div>
    <div class="d" style="margin-top:auto;opacity:.8">Thiếu: vai trò · độ dài mỗi ý · đối tượng học sinh · cách trình bày</div></div>
-  <div class="arrow">›</div>
   <div class="card dark" style="flex:1.35"><div class="pill" style="align-self:flex-start">SAU</div>
    <div class="d" style="font-size:24px">Hãy <b style="color:{Y}">nhập vai một giáo viên môn Địa lý</b>, nhiệt tình và dễ hiểu. Giúp tôi liệt kê 3 nguyên nhân chính gây ra ô nhiễm không khí ở các thành phố lớn, <b style="color:{Y}">kèm theo mỗi nguyên nhân là một mô tả ngắn từ 2-3 câu</b>. Nội dung sẽ được tôi sử dụng cho bài thuyết trình trong lớp học, vì vậy hãy <b style="color:{Y}">trình bày ngắn gọn, rõ ràng và dễ nhớ</b> cho <b style="color:{Y}">học sinh cấp 3</b>.</div></div>
  </div>
@@ -219,7 +215,7 @@ items.append(page("h10-tao-anh", f"""
   <div class="card"><div class="t">Pixar</div><div class="d">Hoạt hình 3D, nhân vật tròn trịa, mắt to, ánh sáng mềm.</div></div>
   <div class="card"><div class="t">Anime</div><div class="d">Nét vẽ Nhật Bản, đường viền rõ, màu phẳng.</div></div>
   <div class="card"><div class="t">Ghibli Studio</div><div class="d">Màu nước dịu, cảnh thiên nhiên chi tiết, cảm giác ấm áp.</div></div>
-  <div class="card yel"><div class="t">Phác thảo → ảnh thật</div><div class="d">Chụp hình vẽ tay, đính kèm, rồi dán câu lệnh "Hãy chuyển phác thảo này thành một ảnh chân thật..."</div></div>
+  <div class="card yel"><div class="t">Phác thảo thành ảnh thật</div><div class="d">Chụp hình vẽ tay, đính kèm, rồi dán câu lệnh "Hãy chuyển phác thảo này thành một ảnh chân thật..."</div></div>
  </div>
 </div>"""))
 
@@ -249,11 +245,8 @@ items.append(page("h12-chatbot", f"""
  <h1>Tự tạo <span class="hl">trợ giảng ảo</span> trong 4 bước</h1>
  <div class="row" style="flex:1;align-items:stretch">
   <div class="card"><div class="num">1</div><div class="t">Đặt tên</div><div class="d">Ví dụ: "Trợ giảng Vật lý 7".</div></div>
-  <div class="arrow">›</div>
   <div class="card dark"><div class="num">2</div><div class="t">Dán hướng dẫn</div><div class="d">System prompt: vai trò, phạm vi, giọng điệu, điều không được làm.</div></div>
-  <div class="arrow">›</div>
   <div class="card"><div class="num">3</div><div class="t">Đính kèm tài liệu</div><div class="d">SGK, đề cương. AI chỉ trả lời trong phạm vi này.</div></div>
-  <div class="arrow">›</div>
   <div class="card yel"><div class="num" style="background:{G};color:{Y}">4</div><div class="t">Thử rồi chia sẻ</div><div class="d">Tự đóng vai học sinh hỏi thử 5 câu. Ổn mới gửi link.</div></div>
  </div>
  <div class="foot">Câu quan trọng nhất: "Khi học sinh hỏi đáp án trực tiếp các bài tập, không đưa ra ngay đáp án."</div>

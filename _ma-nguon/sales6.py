@@ -28,7 +28,7 @@ def build(src):
         return f'<div style="position:absolute;left:72px;top:60px;right:72px;display:flex;justify-content:space-between;align-items:center"><div style="font-family:{HAND};font-size:34px">Thầy cô đang hỏi: “{q}”</div><div style="font-size:17px;font-weight:700">{n}/6</div></div>'
     def h1(t, top=120, size=56): return f'<h1 style="position:absolute;left:72px;right:72px;top:{top}px;margin:0;font-size:{size}px;line-height:1.12;font-weight:800">{t}</h1>'
     def cite(text, style): return f'<div style="position:absolute;background:{G};color:{W};font-size:17px;font-weight:700;padding:8px 16px;border-radius:8px;{style}">{text}</div>'
-    def cta(): return f'<div style="position:absolute;left:0;right:0;bottom:0;height:100px;background:{G};color:{W};display:flex;align-items:center;justify-content:space-between;padding:0 72px"><div style="font-size:24px;font-weight:800">Trọn bộ {PRICE}</div><div style="font-size:21px">Bấm link trong bài đăng · mua trên <b>{SHOP}</b> →</div></div>'
+    def cta(): return f'<div style="position:absolute;left:0;right:0;bottom:0;height:100px;background:{G};color:{W};display:flex;align-items:center;justify-content:space-between;padding:0 72px"><div style="font-size:24px;font-weight:800">Trọn bộ {PRICE}</div><div style="font-size:21px">Bấm link trong bài đăng · mua trên <b>{SHOP}</b></div></div>'
 
     # 1. CÁI GÌ: nhìn là biết dạy AI, có căn cứ, giá, bấm mua
     s1 = f"""<div style="{base}">
@@ -44,7 +44,7 @@ def build(src):
 <div style="background:{MT};border-radius:16px;padding:22px 20px"><div style="font-size:25px;font-weight:800;line-height:1.25">36 bài cầm tay chỉ việc</div><div style="font-size:18px;margin-top:8px">Mỗi bài một việc, làm theo là xong</div></div>
 <div style="background:{MT};border-radius:16px;padding:22px 20px"><div style="font-size:25px;font-weight:800;line-height:1.25">Đổi sẵn cho 3 cấp học</div><div style="font-size:18px;margin-top:8px">Mầm non, Tiểu học, THCS</div></div>
 </div>
-<div style="position:absolute;left:72px;right:72px;top:1140px;font-size:19px;line-height:1.45">Sản phẩm cá nhân của tác giả {AUTHOR}. Vuốt sang để xem trang thật bên trong →</div>
+<div style="position:absolute;left:72px;right:72px;top:1140px;font-size:19px;line-height:1.45">Sản phẩm cá nhân của tác giả {AUTHOR}. Vuốt sang để xem trang thật bên trong.</div>
 {cta()}</div>"""
 
     # 2. CÓ ĐÚNG QUY ĐỊNH KHÔNG
@@ -63,7 +63,7 @@ def build(src):
 {row('Luật 134/2025 · Luật 91/2025', 'Luật Trí tuệ nhân tạo, Luật Bảo vệ dữ liệu cá nhân')}
 <div style="border-top:2px solid {MT}"></div>
 </div>
-<div style="position:absolute;left:72px;right:72px;top:1030px;background:{MT};border-radius:16px;padding:20px 24px;font-size:21px;line-height:1.45">20 văn bản, xếp theo thứ tự: Bộ GDĐT 2026 → văn bản chuyên môn → Sở GDĐT → luật liên quan. Đầu mỗi bài có dòng <b>Căn cứ</b>.</div>
+<div style="position:absolute;left:72px;right:72px;top:1030px;background:{MT};border-radius:16px;padding:20px 24px;font-size:21px;line-height:1.45">20 văn bản, xếp theo thứ tự: (1) văn bản Bộ GDĐT 2026; (2) văn bản chuyên môn; (3) văn bản Sở GDĐT; (4) luật liên quan. Đầu mỗi bài có dòng <b>Căn cứ</b>.</div>
 {cta()}</div>"""
 
     # 3. MÌNH CÓ LÀM ĐƯỢC KHÔNG
