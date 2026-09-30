@@ -29,6 +29,12 @@ module.exports = [
   '**Làm việc mới:** bấm **Trò chuyện mới** (New chat). Nếu viết chung một cuộc, AI sẽ trộn yêu cầu cũ vào việc mới.',
   '**Xuống dòng trong ô nhập:** giữ **Shift** rồi bấm **Enter**. Chỉ bấm Enter là câu lệnh bị gửi đi luôn.',
 ]],
+['stuck', [
+  '**Không thấy nút Đăng nhập:** có thể thầy cô đã đăng nhập sẵn. Nhìn góc trên bên phải, nếu thấy ảnh đại diện tròn là đã vào được.',
+  '**Trang báo lỗi hoặc quay mãi:** tải lại trang (bấm phím F5). Vẫn không được thì thử mở bằng tab ẩn danh (Ctrl + Shift + N).',
+  '**AI trả lời bằng tiếng Anh:** gõ tiếp một dòng: Trình bày bằng tiếng Việt.',
+  '**Lỡ tay đóng trang:** mở lại trang web, cuộc trò chuyện cũ nằm ở cột bên trái.',
+]],
 
 ['lesson', 'A3', 'Sáu mảnh ghép của một câu lệnh tốt'],
 ['p', 'Câu lệnh dưới đây là mẫu chuẩn để thầy cô nhìn và bắt chước. Mỗi cụm từ trả lời một câu hỏi mà AI cần biết.'],
@@ -41,7 +47,6 @@ module.exports = [
 ['tip', 'Mẹo ghi nhớ: trước khi bấm gửi, đọc lại câu lệnh và tự hỏi: AI đã biết **Ai nói? Nói cho ai? Để làm gì? Dài bao nhiêu? Giọng thế nào?** chưa.'],
 
 // ===================== PHẦN B =====================
-['pb'],
 ['part', 'PHẦN B', 'Buổi 1 · Kỹ thuật viết câu lệnh', 'Bốn kỹ thuật cơ bản, cách tự chấm câu lệnh và cách nhờ AI soạn bài giảng.'],
 ['img', 'h04-ky-thuat-prompt', 'Hình B. Bốn kỹ thuật viết câu lệnh, xếp từ đơn giản đến đầy đủ.'],
 
@@ -101,7 +106,7 @@ module.exports = [
 }],
 
 ['lesson', 'B5', 'Đánh giá prompt và cải thiện prompt'],
-['p', 'Cách tự chấm một câu lệnh: đối chiếu với 6 mảnh ghép ở bài A3. Thiếu mảnh nào thì thêm mảnh đó.'],
+['p', 'Cách tự chấm một câu lệnh: đối chiếu với 6 mảnh ghép ở {{A3}}. Thiếu mảnh nào thì thêm mảnh đó.'],
 ['prompt', 'Prompt cần đánh giá', ['Tìm cho tôi 3 nguyên nhân chính gây ra ô nhiễm không khí ở các thành phố lớn để sử dụng trong bài thuyết trình.']],
 ['prompt', 'Prompt cải thiện', ['Hãy nhập vai một giáo viên môn Địa lý, nhiệt tình và dễ hiểu. Giúp tôi liệt kê 3 nguyên nhân chính gây ra ô nhiễm không khí ở các thành phố lớn, kèm theo mỗi nguyên nhân là một mô tả ngắn từ 2-3 câu. Nội dung sẽ được tôi sử dụng cho bài thuyết trình trong lớp học, vì vậy hãy trình bày ngắn gọn, rõ ràng và dễ nhớ cho học sinh cấp 3.']],
 ['img', 'h05-truoc-sau', 'Hình B5. Những cụm từ được thêm vào (tô vàng) chính là các mảnh ghép còn thiếu.'],
@@ -131,7 +136,6 @@ module.exports = [
 ['tip', 'Dấu ngoặc vuông [ ] trong câu lệnh mẫu nghĩa là "điền vào đây". Khi dùng, thầy cô xóa cả dấu ngoặc và thay bằng nội dung của mình.'],
 
 // ===================== PHẦN C =====================
-['pb'],
 ['part', 'PHẦN C', 'Buổi 2 · Kế hoạch bài dạy và kiểm tra đánh giá', 'Từ giáo án tích cực, đề tự luận, đề trắc nghiệm theo ma trận đến bảng tiêu chí chấm điểm.'],
 
 ['lesson', 'C1', 'Kế hoạch bài dạy theo kỹ thuật dạy học tích cực'],
@@ -277,7 +281,6 @@ module.exports = [
 ]],
 
 // ===================== PHẦN D =====================
-['pb'],
 ['part', 'PHẦN D', 'Buổi 3 · Sản phẩm đa phương tiện', 'Ảnh, trò chơi, truyện tranh, bài hát, giọng đọc, hội thoại: những thứ trước đây phải thuê người làm.'],
 ['img', 'h11-ban-do-cong-cu', 'Hình D. Chọn công cụ theo sản phẩm muốn làm.'],
 
@@ -432,7 +435,6 @@ module.exports = [
 ['tip', 'Thầy cô THCS đổi "học sinh cấp 3" thành "học sinh lớp 8" và thời gian dự án thành "1 tuần". Có thể bật chế độ trò chuyện bằng giọng nói trên điện thoại để học sinh nói chuyện trực tiếp với "chuyên gia".'],
 
 // ===================== PHẦN E =====================
-['pb'],
 ['part', 'PHẦN E', 'Buổi 4 · Deep Research và trợ lý chatbot', 'Giao AI đọc hàng chục nguồn thay mình và tạo trợ giảng ảo trả lời học sinh 24 giờ.'],
 
 ['lesson', 'E1', 'Deep Research: báo cáo chuyên sâu phục vụ giảng dạy'],
@@ -451,7 +453,7 @@ module.exports = [
 ['p', '**WASH** là viết tắt tiếng Anh của Nước, Vệ sinh môi trường và Vệ sinh cá nhân. Câu lệnh chỉ rõ **nguồn gốc** (tài liệu UNICEF) và **mốc thời gian** (2023-2025) nên báo cáo bám sát thực tế.'],
 
 ['lesson', 'E2', 'Deep Research để kiểm chứng thông tin'],
-['p', 'Cách làm: dán một đoạn văn bản (ví dụ một đoạn trong báo cáo ở E1, hoặc một tin trên mạng) rồi yêu cầu AI kiểm tra từng số liệu với nguồn gốc.'],
+['p', 'Cách làm: dán một đoạn văn bản (ví dụ một đoạn trong báo cáo ở {{E1}}, hoặc một tin trên mạng) rồi yêu cầu AI kiểm tra từng số liệu với nguồn gốc.'],
 ['prompt', 'Câu lệnh mẫu kiểm chứng', ['Hãy kiểm tra độ chính xác của từng số liệu và từng nhận định trong đoạn văn dưới đây. Với mỗi ý, cho biết: đúng, sai hay chưa đủ căn cứ, kèm đường link nguồn gốc. Trình bày dạng bảng.', '[dán đoạn văn cần kiểm tra]']],
 ['tip', 'Ngay cả khi AI đưa link, thầy cô vẫn mở link đó và tìm đúng con số trên trang. Nếu không tìm thấy, coi như số liệu chưa được xác minh.'],
 
@@ -520,7 +522,6 @@ module.exports = [
 ['why', 'Vì sao "Mỗi lần chỉ đặt một câu hỏi"?', 'Thiếu câu này, AI sẽ tuôn ra cả 30 câu hỏi cùng lúc. Có câu này, cuộc trò chuyện diễn ra từng lượt giống phỏng vấn thật. Học sinh luyện được phản xạ trả lời.'],
 
 // ===================== PHẦN F =====================
-['pb'],
 ['part', 'PHẦN F', 'Dùng AI hiệu quả và có trách nhiệm', 'Những điều cần nhớ để AI giúp mình mà không gây hại cho học sinh.'],
 ['lesson', 'F1', 'Khung năng lực AI cho giáo viên của UNESCO'],
 ['p', 'UNESCO đưa ra khung năng lực AI cho giáo viên gồm **5 lĩnh vực**, mỗi lĩnh vực đi qua **3 cấp độ**: Tiếp thu (biết dùng), Đào sâu (dùng thành thạo vào dạy học), Sáng tạo (tự thiết kế cách dùng mới). Cuốn sách này đưa thầy cô đi hết cấp độ Tiếp thu và bước vào cấp độ Đào sâu.'],
@@ -550,27 +551,26 @@ module.exports = [
 ]],
 
 // ===================== PHỤ LỤC =====================
-['pb'],
 ['part', 'PHỤ LỤC', 'Tra nhanh và mẫu điền sẵn', 'Mở phần này khi cần làm ngay, không cần đọc lại cả sách.'],
 ['lesson', 'P1', 'Bắt đầu theo cấp học'],
 ['img', 'h16-cap-hoc', 'Hình P1. Ba việc làm được ngay cho mỗi cấp học.'],
 ['table', ['Tôi muốn...', 'Mở bài', 'Công cụ'], [
-  ['Có ý tưởng bài dạy thật nhanh', 'B1, B4', 'ChatGPT, Gemini'],
-  ['Soạn bài giảng có slide, Quiz', 'B6', 'ChatGPT, Gemini'],
-  ['Soạn giáo án góc trạm, STEM', 'C1, C2', 'ChatGPT, Gemini'],
-  ['Ra đề tự luận, trắc nghiệm', 'C3 đến C6', 'ChatGPT, Gemini, Magic School'],
-  ['Làm bảng tiêu chí chấm', 'C7', 'ChatGPT, Magic School'],
-  ['Tạo ảnh minh họa', 'D1, D2', 'ChatGPT, Gemini, Canva'],
-  ['Tạo trò chơi học tập', 'D3', 'Canva, Gemini (Canvas)'],
-  ['Làm truyện tranh', 'D4', 'Google AI Studio, ChatGPT'],
-  ['Sáng tác bài hát', 'D5', 'ChatGPT + Suno'],
-  ['Tạo giọng đọc, hội thoại', 'D7, D8', 'Google AI Studio'],
-  ['Tìm tài liệu, số liệu có nguồn', 'C9, E1, E2', 'NotebookLM, Deep Research'],
-  ['Tạo trợ giảng cho học sinh', 'E4, E5, E6', 'Gemini (Gem), Poe, Magic School'],
+  ['Có ý tưởng bài dạy thật nhanh', '{{B1:s}}, {{B4:s}}', 'ChatGPT, Gemini'],
+  ['Soạn bài giảng có slide, Quiz', '{{B6:s}}', 'ChatGPT, Gemini'],
+  ['Soạn giáo án góc trạm, STEM', '{{C1:s}}, {{C2:s}}', 'ChatGPT, Gemini'],
+  ['Ra đề tự luận, trắc nghiệm', '{{C3:s}} đến {{C6:s}}', 'ChatGPT, Gemini, Magic School'],
+  ['Làm bảng tiêu chí chấm', '{{C7:s}}', 'ChatGPT, Magic School'],
+  ['Tạo ảnh minh họa', '{{D1:s}}, {{D2:s}}', 'ChatGPT, Gemini, Canva'],
+  ['Tạo trò chơi học tập', '{{D3:s}}', 'Canva, Gemini (Canvas)'],
+  ['Làm truyện tranh', '{{D4:s}}', 'Google AI Studio, ChatGPT'],
+  ['Sáng tác bài hát', '{{D5:s}}', 'ChatGPT + Suno'],
+  ['Tạo giọng đọc, hội thoại', '{{D7:s}}, {{D8:s}}', 'Google AI Studio'],
+  ['Tìm tài liệu, số liệu có nguồn', '{{C9:s}}, {{E1:s}}, {{E2:s}}', 'NotebookLM, Deep Research'],
+  ['Tạo trợ giảng cho học sinh', '{{E4:s}}, {{E5:s}}, {{E6:s}}', 'Gemini (Gem), Poe, Magic School'],
 ]],
 ['lesson', 'P2', 'Mẫu câu lệnh đa năng: điền vào [ ] là dùng được'],
 ['prompt', 'Mẫu 6 mảnh ghép', ['Bạn là [vai trò, ví dụ: giáo viên Toán lớp 3 giàu kinh nghiệm]. Hãy [nhiệm vụ] cho [đối tượng: học sinh lớp mấy, trình độ thế nào] để [mục đích]. Trình bày [định dạng: bảng, gạch đầu dòng, số từ]. Giọng điệu [thân thiện, vui tươi, trang trọng].']],
-['prompt', 'Mẫu 4 ngăn cho đề kiểm tra', ['#NGỮ CẢNH', 'Bạn là giáo viên [môn] lớp [...], bộ sách [...].', '#HƯỚNG DẪN', 'Đọc tài liệu ở mục ##Nội dung bài học. Dựa vào mục ##Mức độ nhận thức để phân loại câu hỏi.', '#DỮ LIỆU', '##Nội dung bài học: [tên tệp đính kèm]', '##Mức độ nhận thức: [dán định nghĩa 4 mức độ ở bài C6]', '#YÊU CẦU', '[số] câu trắc nghiệm 4 đáp án, chỉ có 1 đáp án đúng: [số] nhận biết, [số] thông hiểu, [số] vận dụng. Chỉ dùng nội dung trong tài liệu đính kèm. Có đáp án ở cuối.']],
+['prompt', 'Mẫu 4 ngăn cho đề kiểm tra', ['#NGỮ CẢNH', 'Bạn là giáo viên [môn] lớp [...], bộ sách [...].', '#HƯỚNG DẪN', 'Đọc tài liệu ở mục ##Nội dung bài học. Dựa vào mục ##Mức độ nhận thức để phân loại câu hỏi.', '#DỮ LIỆU', '##Nội dung bài học: [tên tệp đính kèm]', '##Mức độ nhận thức: [dán định nghĩa 4 mức độ ở {{C6:s}}]', '#YÊU CẦU', '[số] câu trắc nghiệm 4 đáp án, chỉ có 1 đáp án đúng: [số] nhận biết, [số] thông hiểu, [số] vận dụng. Chỉ dùng nội dung trong tài liệu đính kèm. Có đáp án ở cuối.']],
 ['prompt', 'Mẫu system prompt cho chatbot', ['Bạn là trợ giảng môn [môn] lớp [...]. Chỉ trả lời câu hỏi về [phạm vi] dựa trên tài liệu đính kèm, không trả lời các câu hỏi khác. Trả lời ngắn gọn, thân thiện, phù hợp học sinh lớp [...]. Khi học sinh hỏi đáp án bài tập, không đưa ra ngay đáp án mà hướng dẫn từng bước và đặt câu hỏi gợi mở.']],
 ['lesson', 'P3', 'Câu nói thêm khi kết quả chưa ưng'],
 ['table', ['Kết quả bị...', 'Gõ tiếp câu này'], [
@@ -584,22 +584,22 @@ module.exports = [
 ]],
 ['lesson', 'P4', 'Liên kết tài liệu thực hành'],
 ['links', [
-  ['Sách Family and Friends 4 - Class Book (bài C4)', 'https://drive.google.com/file/d/11eaMmXCfX1xJYn6odem3HItJUnz-AcPr/view?usp=sharing'],
-  ['Tài liệu bài C4 (link rút gọn)', 'https://tinyurl.com/WS2Muc3'],
-  ['Tài liệu Hóa học 10: đề bài và mô tả mức độ (bài C5)', 'https://tinyurl.com/WS2Muc4'],
-  ['Tài liệu Tin học 6: ma trận, đặc tả, nội dung (bài C6)', 'https://tinyurl.com/WS2Muc6'],
-  ['Ví dụ tìm kiếm và phân tích thông tin (bài C9)', 'https://tinyurl.com/WS2Notebook'],
+  ['Sách Family and Friends 4 - Class Book (dùng ở {{C4:s}})', 'https://drive.google.com/file/d/11eaMmXCfX1xJYn6odem3HItJUnz-AcPr/view?usp=sharing'],
+  ['Tài liệu cho {{C4:s}} (link rút gọn)', 'https://tinyurl.com/WS2Muc3'],
+  ['Tài liệu Hóa học 10: đề bài và mô tả mức độ (dùng ở {{C5:s}})', 'https://tinyurl.com/WS2Muc4'],
+  ['Tài liệu Tin học 6: ma trận, đặc tả, nội dung (dùng ở {{C6:s}})', 'https://tinyurl.com/WS2Muc6'],
+  ['Ví dụ tìm kiếm và phân tích thông tin (dùng ở {{C9:s}})', 'https://tinyurl.com/WS2Notebook'],
   ['Hướng dẫn thực hành buổi 2, 3, 4', 'https://tinyurl.com/HdThucHanhWS2 · https://tinyurl.com/HdThucHanhWS3 · https://tinyurl.com/HdThucHanhWS4'],
-  ['Canva cho giáo dục (bài D2, D3)', 'https://www.canva.com/vi_vn/giao-duc/'],
-  ['Game tham khảo tạo bằng Canva (bài D3)', 'https://vnfeai.my.canva.site/gamehoctap01'],
-  ['Game tham khảo tạo bằng Gemini (bài D3)', 'https://g.co/gemini/share/fcae4882cf2b'],
-  ['Ví dụ báo cáo Deep Research: Nước sạch và vệ sinh (bài E1)', 'https://gemini.google.com/share/e0324042549d'],
-  ['Ví dụ kiểm chứng thông tin (bài E2)', 'https://chatgpt.com/share/687f4092-96f4-8003-8931-c002ac35bae7'],
-  ['Ví dụ báo cáo và infographic du lịch Đà Lạt (bài E3)', 'https://g.co/gemini/share/055dcd49d387 · https://g.co/gemini/share/9164e4f3c7e8'],
-  ['Kết quả mẫu nghiên cứu khoa học (bài E3)', 'https://shorturl.at/nmkUM'],
-  ['Tài liệu Vatly7.pdf (bài E4)', 'https://drive.google.com/file/d/1wrPa7W24GQVXR1RiknUdS08hrBtlr8TV/view?usp=sharing'],
-  ['Sách giáo khoa Hóa 10 (bài E5)', 'https://drive.google.com/file/d/1Df3WKjQnYCWkISzsc9-S3TNHzEg0qtOK/view'],
-  ['Chương trình GDPT 2018 môn Địa lý (bài E6)', 'https://drive.google.com/file/d/1Izea6mBXBOhRyw3cVdrmoNgpOwcbX8jZ/view?usp=sharing'],
-  ['SGK Tin học 6 (bài E6)', 'https://drive.google.com/file/d/10w1g-hKK3_qelt_Kck0CZtxub6IVtUCH/view?usp=sharing'],
+  ['Canva cho giáo dục (dùng ở {{D2:s}}, {{D3:s}})', 'https://www.canva.com/vi_vn/giao-duc/'],
+  ['Game tham khảo tạo bằng Canva (dùng ở {{D3:s}})', 'https://vnfeai.my.canva.site/gamehoctap01'],
+  ['Game tham khảo tạo bằng Gemini (dùng ở {{D3:s}})', 'https://g.co/gemini/share/fcae4882cf2b'],
+  ['Ví dụ báo cáo Deep Research: Nước sạch và vệ sinh (dùng ở {{E1:s}})', 'https://gemini.google.com/share/e0324042549d'],
+  ['Ví dụ kiểm chứng thông tin (dùng ở {{E2:s}})', 'https://chatgpt.com/share/687f4092-96f4-8003-8931-c002ac35bae7'],
+  ['Ví dụ báo cáo và infographic du lịch Đà Lạt (dùng ở {{E3:s}})', 'https://g.co/gemini/share/055dcd49d387 · https://g.co/gemini/share/9164e4f3c7e8'],
+  ['Kết quả mẫu nghiên cứu khoa học (dùng ở {{E3:s}})', 'https://shorturl.at/nmkUM'],
+  ['Tài liệu Vatly7.pdf (dùng ở {{E4:s}})', 'https://drive.google.com/file/d/1wrPa7W24GQVXR1RiknUdS08hrBtlr8TV/view?usp=sharing'],
+  ['Sách giáo khoa Hóa 10 (dùng ở {{E5:s}})', 'https://drive.google.com/file/d/1Df3WKjQnYCWkISzsc9-S3TNHzEg0qtOK/view'],
+  ['Chương trình GDPT 2018 môn Địa lý (dùng ở {{E6:s}})', 'https://drive.google.com/file/d/1Izea6mBXBOhRyw3cVdrmoNgpOwcbX8jZ/view?usp=sharing'],
+  ['SGK Tin học 6 (dùng ở {{E6:s}})', 'https://drive.google.com/file/d/10w1g-hKK3_qelt_Kck0CZtxub6IVtUCH/view?usp=sharing'],
 ]],
 ];

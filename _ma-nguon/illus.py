@@ -4,39 +4,35 @@ import os, json
 OUT = os.path.join(os.path.dirname(__file__), "illus_html")
 os.makedirs(OUT, exist_ok=True)
 
-G = "#1B1F24"   # mực than
-Y = "#A67C3D"   # đồng nhũ (chỉ làm điểm nhấn)
-W = "#F7F5F0"   # ngà
-GT = "rgba(27,31,36,.035)"
-GT2 = "rgba(27,31,36,.07)"
-YT = "rgba(166,124,61,.10)"
+G = "#2E3A67"   # xanh chàm dịu
+Y = "#CFE8E0"   # xanh bạc hà nhạt
+W = "#FFFFFF"   # trắng giấy
+GT = "rgba(46,58,103,.08)"   # sắc nhạt của xanh
+GT2 = "rgba(46,58,103,.16)"
+YT = "rgba(207,232,224,.55)"  # sắc nhạt của vàng
 
 CSS = f"""
 @font-face{{font-family:BVP;src:url(file:///root/.fonts/BeVietnamPro-400.ttf);font-weight:400}}
 @font-face{{font-family:BVP;src:url(file:///root/.fonts/BeVietnamPro-500.ttf);font-weight:500}}
 @font-face{{font-family:BVP;src:url(file:///root/.fonts/BeVietnamPro-700.ttf);font-weight:700}}
-@font-face{{font-family:BVP;src:url(file:///root/.fonts/BeVietnamPro-800.ttf);font-weight:600}}
-@font-face{{font-family:PF;src:url(file:///root/.fonts/Playfair-0-500.ttf);font-weight:500}}
-@font-face{{font-family:PF;src:url(file:///root/.fonts/Playfair-0-600.ttf);font-weight:600}}
-@font-face{{font-family:PF;src:url(file:///root/.fonts/Playfair-1-500.ttf);font-weight:500;font-style:italic}}
+@font-face{{font-family:BVP;src:url(file:///root/.fonts/BeVietnamPro-800.ttf);font-weight:800}}
 *{{box-sizing:border-box}}
 body{{margin:0;font-family:BVP,sans-serif;color:{G};background:{W}}}
-.frame{{width:1600px;height:900px;padding:72px 88px;display:flex;flex-direction:column;gap:30px;background:{W};position:relative;overflow:hidden}}
-.kicker{{font-size:19px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:{Y}}}
-h1{{margin:0;font-family:PF,serif;font-size:60px;line-height:1.12;font-weight:500;letter-spacing:-.01em}}
-.hl{{font-style:italic;color:{Y}}}
-.row{{display:flex;gap:24px}}
-.card{{background:transparent;border:1.5px solid rgba(27,31,36,.14);border-radius:4px;padding:30px;flex:1;display:flex;flex-direction:column;gap:14px}}
-.card.dark{{background:{G};color:{W};border-color:{G}}}
-.card.yel{{background:transparent;border:1.5px solid {Y};color:{G}}}
-.num{{width:56px;height:56px;border-radius:50%;background:transparent !important;border:1.5px solid {Y};color:{Y} !important;display:flex;align-items:center;justify-content:center;font-family:PF,serif;font-size:28px;font-weight:500;flex:none}}
-.dark .num{{border-color:{Y}}}
-.t{{font-family:PF,serif;font-size:36px;font-weight:500;line-height:1.2}}
-.dark .t{{color:{W}}}
-.d{{font-size:25px;line-height:1.5;font-weight:400}}
-.pill{{display:inline-block;padding:6px 16px;border-radius:999px;background:transparent;border:1.2px solid {Y};color:{Y};font-weight:500;font-size:19px;letter-spacing:.06em}}
-.arrow{{font-size:44px;font-weight:300;color:{Y};align-self:center}}
-.foot{{margin-top:auto;font-size:22px;font-weight:400;padding-top:18px;border-top:1px solid rgba(27,31,36,.14)}}
+.frame{{width:1600px;height:900px;padding:64px 72px;display:flex;flex-direction:column;gap:28px;background:{W};position:relative;overflow:hidden}}
+.kicker{{font-size:24px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:{G}}}
+h1{{margin:0;font-size:58px;line-height:1.12;font-weight:800}}
+.hl{{background:linear-gradient(transparent 58%,{Y} 58%);padding:0 6px}}
+.row{{display:flex;gap:28px}}
+.card{{background:{GT};border-radius:28px;padding:32px;flex:1;display:flex;flex-direction:column;gap:14px}}
+.card.dark{{background:{G};color:{W}}}
+.card.yel{{background:{Y};color:{G}}}
+.num{{width:64px;height:64px;border-radius:50%;background:{Y};color:{G};display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;flex:none}}
+.dark .num{{background:{Y}}}
+.t{{font-size:36px;font-weight:800;line-height:1.2}}
+.d{{font-size:27px;line-height:1.4;font-weight:500}}
+.pill{{display:inline-block;padding:8px 20px;border-radius:999px;background:{Y};color:{G};font-weight:700;font-size:22px}}
+.arrow{{font-size:56px;font-weight:800;color:{G};align-self:center}}
+.foot{{margin-top:auto;font-size:24px;font-weight:600;opacity:.85}}
 .mono{{font-family:BVP;font-weight:500}}
 """
 
@@ -80,22 +76,22 @@ items.append(page("h02-khung-chat", f"""
    <div><b>6</b> Nút gửi (mũi tên): bấm để gửi.</div>
   </div>
  </div>
- <div style="flex:1;height:760px;border:4px solid {G};border-radius:4px;display:flex;overflow:hidden;position:relative">
+ <div style="flex:1;height:760px;border:4px solid {G};border-radius:32px;display:flex;overflow:hidden;position:relative">
   <div style="width:200px;background:{GT};padding:24px;display:flex;flex-direction:column;gap:16px">
-   <div style="background:{G};color:{W};border-radius:4px;padding:12px 14px;font-weight:700;font-size:20px;position:relative">+ Trò chuyện mới<span class="num" style="position:absolute;right:-26px;top:-24px;width:48px;height:48px;font-size:24px">1</span></div>
-   <div style="height:10px;background:{GT2};border-radius:5px"></div><div style="height:14px;width:70%;background:{GT2};border-radius:7px"></div><div style="height:14px;width:85%;background:{GT2};border-radius:7px"></div>
+   <div style="background:{G};color:{W};border-radius:14px;padding:12px 14px;font-weight:700;font-size:20px;position:relative">+ Trò chuyện mới<span class="num" style="position:absolute;right:-26px;top:-24px;width:48px;height:48px;font-size:24px">1</span></div>
+   <div style="height:14px;background:{GT2};border-radius:7px"></div><div style="height:14px;width:70%;background:{GT2};border-radius:7px"></div><div style="height:14px;width:85%;background:{GT2};border-radius:7px"></div>
   </div>
   <div style="flex:1;padding:32px;display:flex;flex-direction:column;gap:20px">
-   <div style="align-self:flex-end;background:{YT};border-radius:4px;padding:16px 22px;font-size:21px;max-width:420px">Cho tôi gợi ý bài giảng về chủ đề quá trình quang hợp.</div>
-   <div style="position:relative;border-radius:4px;padding:22px;background:{GT};font-size:20px;line-height:1.5">
+   <div style="align-self:flex-end;background:{YT};border-radius:22px;padding:16px 22px;font-size:21px;max-width:420px">Cho tôi gợi ý bài giảng về chủ đề quá trình quang hợp.</div>
+   <div style="position:relative;border-radius:22px;padding:22px;background:{GT};font-size:20px;line-height:1.5">
     <b>Gợi ý bài giảng: Quá trình quang hợp</b><br>1. Khởi động: Vì sao cây cần ánh sáng?<br>2. Hình thành kiến thức: nguyên liệu và sản phẩm...<br>3. Luyện tập...
     <span class="num" style="position:absolute;left:-22px;top:-22px;width:48px;height:48px;font-size:24px">2</span>
-    <div style="margin-top:12px;display:flex;gap:10px;align-items:center"><span style="border:2px solid {G};border-radius:4px;padding:4px 12px;font-size:17px;font-weight:700">Sao chép</span><span class="num" style="width:44px;height:44px;font-size:22px">3</span></div>
+    <div style="margin-top:12px;display:flex;gap:10px;align-items:center"><span style="border:2px solid {G};border-radius:10px;padding:4px 12px;font-size:17px;font-weight:700">Sao chép</span><span class="num" style="width:44px;height:44px;font-size:22px">3</span></div>
    </div>
-   <div style="margin-top:auto;border:3px solid {G};border-radius:4px;padding:18px 18px;display:flex;align-items:center;gap:14px;position:relative">
-    <div style="width:44px;height:44px;border-radius:50%;border:3px solid {G};display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:600">+</div>
+   <div style="margin-top:auto;border:3px solid {G};border-radius:26px;padding:18px 18px;display:flex;align-items:center;gap:14px;position:relative">
+    <div style="width:44px;height:44px;border-radius:50%;border:3px solid {G};display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800">+</div>
     <div style="flex:1;font-size:21px;opacity:.6">Nhập câu lệnh của thầy cô...</div>
-    <div style="width:52px;height:52px;border-radius:50%;background:{G};color:{Y};display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:600">↑</div>
+    <div style="width:52px;height:52px;border-radius:50%;background:{G};color:{Y};display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800">↑</div>
     <span class="num" style="position:absolute;left:-10px;top:-40px;width:48px;height:48px;font-size:24px">4</span>
     <span class="num" style="position:absolute;left:300px;top:-40px;width:48px;height:48px;font-size:24px">5</span>
     <span class="num" style="position:absolute;right:-10px;top:-40px;width:48px;height:48px;font-size:24px">6</span>
@@ -157,16 +153,16 @@ items.append(page("h06-tpack", f"""
   <div class="d" style="font-size:28px"><b>CK</b> · Kiến thức nội dung: dạy cái gì.</div>
   <div class="d"><b>PK</b> · Kiến thức sư phạm: dạy bằng cách nào.</div>
   <div class="d"><b>TK</b> · Kiến thức công nghệ: dùng công cụ gì.</div>
-  <div class="d" style="background:{YT};padding:18px 22px;border-radius:4px">Khi viết prompt TPACK, thầy cô điền đủ 3 dòng CK, PK, TK. AI sẽ đề xuất ý tưởng ở chỗ giao nhau.</div>
+  <div class="d" style="background:{YT};padding:18px 22px;border-radius:18px">Khi viết prompt TPACK, thầy cô điền đủ 3 dòng CK, PK, TK. AI sẽ đề xuất ý tưởng ở chỗ giao nhau.</div>
  </div>
  <div style="flex:1;height:760px;position:relative">
-  <div style="position:absolute;left:150px;top:20px;width:420px;height:420px;border-radius:50%;background:rgba(27,31,36,.05);border:4px solid {G}"></div>
-  <div style="position:absolute;left:0;top:300px;width:420px;height:420px;border-radius:50%;background:rgba(166,124,61,.12);border:4px solid {G}"></div>
-  <div style="position:absolute;left:300px;top:300px;width:420px;height:420px;border-radius:50%;background:rgba(27,31,36,.02);border:4px solid {G}"></div>
-  <div style="position:absolute;left:300px;top:110px;font-size:40px;font-weight:600">CK</div>
-  <div style="position:absolute;left:90px;top:540px;font-size:40px;font-weight:600">PK</div>
-  <div style="position:absolute;left:560px;top:540px;font-size:40px;font-weight:600">TK</div>
-  <div style="position:absolute;left:290px;top:390px;background:{G};color:{Y};font-weight:600;font-size:30px;padding:10px 20px;border-radius:999px">TPACK</div>
+  <div style="position:absolute;left:150px;top:20px;width:420px;height:420px;border-radius:50%;background:rgba(46,58,103,.18);border:4px solid {G}"></div>
+  <div style="position:absolute;left:0;top:300px;width:420px;height:420px;border-radius:50%;background:rgba(207,232,224,.30);border:4px solid {G}"></div>
+  <div style="position:absolute;left:300px;top:300px;width:420px;height:420px;border-radius:50%;background:rgba(46,58,103,.10);border:4px solid {G}"></div>
+  <div style="position:absolute;left:300px;top:110px;font-size:40px;font-weight:800">CK</div>
+  <div style="position:absolute;left:90px;top:540px;font-size:40px;font-weight:800">PK</div>
+  <div style="position:absolute;left:560px;top:540px;font-size:40px;font-weight:800">TK</div>
+  <div style="position:absolute;left:290px;top:390px;background:{G};color:{Y};font-weight:800;font-size:30px;padding:10px 20px;border-radius:999px">TPACK</div>
  </div>
 </div>"""))
 
@@ -200,16 +196,16 @@ items.append(page("h08-muc-do-nhan-thuc", f"""
 # 9. Rubric
 cells = ""
 for lv, pt in [("Rất tốt", "4"), ("Tốt", "3"), ("Trung bình", "2"), ("Chưa đạt yêu cầu", "1")]:
-    cells += f"<div style='background:{G};color:{W};border-radius:4px;padding:14px;font-size:22px;font-weight:700;text-align:center'>{lv}<br><span style='color:{Y}'>{pt} điểm</span></div>"
+    cells += f"<div style='background:{G};color:{W};border-radius:14px;padding:14px;font-size:22px;font-weight:700;text-align:center'>{lv}<br><span style='color:{Y}'>{pt} điểm</span></div>"
 rows = ""
 for crit in ["Kiến thức môn học", "Kỹ năng lập trình", "Giao diện, tương tác", "Tính sáng tạo", "Mức độ hoàn thiện"]:
-    rows += f"<div style='background:{YT};border-radius:4px;padding:14px;font-size:22px;font-weight:700'>{crit}</div>" + "".join(f"<div style='background:{GT};border-radius:4px'></div>" for _ in range(4))
+    rows += f"<div style='background:{YT};border-radius:14px;padding:14px;font-size:22px;font-weight:700'>{crit}</div>" + "".join(f"<div style='background:{GT};border-radius:14px'></div>" for _ in range(4))
 items.append(page("h09-rubric", f"""
 <div class="frame">
  <div class="kicker">Xây dựng tiêu chí đánh giá</div>
  <h1>AI kẻ sẵn <span class="hl">bảng tiêu chí 4 mức</span>. Thầy cô chỉ duyệt.</h1>
  <div style="display:grid;grid-template-columns:1.3fr repeat(4,minmax(0,1fr));gap:12px;flex:1;grid-auto-rows:1fr">
-  <div style="font-size:22px;font-weight:600;padding:14px">Tiêu chí</div>{cells}{rows}
+  <div style="font-size:22px;font-weight:800;padding:14px">Tiêu chí</div>{cells}{rows}
  </div>
 </div>"""))
 
@@ -218,7 +214,7 @@ items.append(page("h10-tao-anh", f"""
 <div class="frame">
  <div class="kicker">Buổi 3 · Tạo hình ảnh</div>
  <h1>Câu lệnh tạo ảnh = <span class="hl">Nội dung</span> + <span class="hl">Phong cách</span></h1>
- <div class="card dark" style="flex:none"><div class="d" style="font-size:30px">Tạo hình ảnh minh họa cho <span style="background:transparent;border:1.5px solid {Y};color:{Y};padding:0 10px;border-radius:8px">câu chuyện Hai Bà Trưng cưỡi voi</span> theo phong cách <span style="background:{W};color:{G};padding:0 10px;border-radius:8px">[Pixar / Anime / Ghibli Studio]</span></div></div>
+ <div class="card dark" style="flex:none"><div class="d" style="font-size:30px">Tạo hình ảnh minh họa cho <span style="background:{Y};color:{G};padding:0 10px;border-radius:8px">câu chuyện Hai Bà Trưng cưỡi voi</span> theo phong cách <span style="background:{W};color:{G};padding:0 10px;border-radius:8px">[Pixar / Anime / Ghibli Studio]</span></div></div>
  <div class="row" style="flex:1">
   <div class="card"><div class="t">Pixar</div><div class="d">Hoạt hình 3D, nhân vật tròn trịa, mắt to, ánh sáng mềm.</div></div>
   <div class="card"><div class="t">Anime</div><div class="d">Nét vẽ Nhật Bản, đường viền rõ, màu phẳng.</div></div>
