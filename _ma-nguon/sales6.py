@@ -73,7 +73,7 @@ def build(src):
 {h1('Được. Sách chỉ ' + hl('bấm vào đâu, gõ câu gì') + ', từng bước một.', 118, 50)}
 {cite('Trích nguyên văn · Sách, ' + bai('A2') + ', trang ' + str(P['A2']), 'left:72px;top:290px')}
 <div style="position:absolute;left:72px;right:72px;top:338px;border:2px solid {G};{shadow}">{img('crop-a2','width:932px')}</div>
-{num(1, 'left:40px;top:440px')}{num(2, 'left:40px;top:610px')}{num(3, 'left:40px;top:770px')}
+{num(1, 'left:40px;top:440px')}{num(2, 'left:40px;top:600px')}{num(3, 'left:40px;top:760px')}
 <div style="position:absolute;left:72px;right:72px;top:890px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
 {card('① Biết trước', 'Bài này giúp gì, mất bao lâu, cần chuẩn bị gì.')}
 {card('② Có người đi cùng', 'Lời tác giả viết như đang ngồi cạnh thầy cô.')}

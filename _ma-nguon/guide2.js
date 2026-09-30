@@ -14,7 +14,7 @@ module.exports = [
 ['tip', 'Nếu thầy cô chỉ có 30 phút hôm nay: đọc hết tệp này (khoảng 10 phút), rồi mở tệp 01 và làm {{A1}}, {{A2}}.'],
 
 ['section', 'MỤC 2', 'Lộ trình 7 ngày, mỗi ngày khoảng 30 phút'],
-['p', 'Các số bài và số trang dưới đây đều là trong **tệp 01 (sách)**. Thầy cô mở tệp 01, nhìn số "Trang" in ở chân trang để lật tới.'],
+['p', 'Các số bài và số trang dưới đây đều là trong **tệp 01 (sách)**. Thầy cô mở tệp 01, nhìn số trang in ở giữa, phía trên mỗi trang để lật tới.'],
 ['table', ['Ngày', 'Mở tệp 01, đọc và làm theo', 'Cuối ngày thầy cô có'], [
   ['1', '{{A1}}, {{A2}}, {{A3}}', 'Câu lệnh đầu tiên đã chạy. Hiểu 6 mảnh ghép của câu lệnh.'],
   ['2', '{{B1}} đến {{B5}}', 'Một đoạn dẫn nhập bài học viết bằng AI.'],
@@ -89,6 +89,5 @@ module.exports = [
   'Tác giả **không bao giờ** nhắn tin riêng xin chuyển khoản vào tài khoản cá nhân, không gửi link mua nào khác, không hỏi mã OTP hay mật khẩu ngân hàng. Nếu thầy cô gặp trường hợp như vậy, đó không phải tác giả.',
   'Trường hoặc tổ chuyên môn cần **đào tạo riêng online**: liên hệ [EMAIL CỦA BẠN].',
 ]],
-['pb'],
 ['basisTable'],
 ];

@@ -25,7 +25,7 @@ Soạn bài, ra đề, làm học liệu bằng AI. Chưa biết gì cũng làm 
 - Soạn theo văn bản mới nhất của Bộ GDĐT năm 2026: Thông tư 18/2026/TT-BGDĐT (Khung năng lực số của giáo viên), Công văn 5385/BGDĐT-GDMN và 5208/BGDĐT-GDPT (nhiệm vụ năm học 2026-2027), Quyết định 2422/QĐ-BGDĐT và Công văn 5588/BGDĐT-GDPT (giáo dục AI)
 - 36 bài cầm tay chỉ việc: bấm vào đâu, gõ câu gì
 - Câu lệnh đổi sẵn cho Mầm non, Tiểu học, THCS
-- Trọn bộ 5 tệp: hướng dẫn, sách 76 trang, thẻ tra nhanh, thư viện câu lệnh, 24 slide
+- Trọn bộ 5 tệp: hướng dẫn, sách 79 trang, thẻ tra nhanh, thư viện câu lệnh, 24 slide
 
 **Giá trọn bộ: 220.000đ.**
 
@@ -37,7 +37,7 @@ Trường, tổ chuyên môn cần đào tạo riêng online: [EMAIL CỦA BẠN
 
 - **Ảnh 1:** Dạy cùng AI. Soạn bài, ra đề, làm học liệu bằng AI. Chưa biết gì cũng làm được.
 - **Ảnh 2:** Soạn theo văn bản mới nhất của Bộ GDĐT năm 2026, tổng cộng 20 văn bản. Ảnh là trang 6 của sách.
-- **Ảnh 3:** Mỗi bài chỉ rõ bấm vào đâu, gõ câu gì. Ảnh là Bài 2, trang 11.
-- **Ảnh 4:** Câu lệnh đã đổi sẵn cho 3 cấp học. Ảnh là Bài 7, trang 21.
+- **Ảnh 3:** Mỗi bài chỉ rõ bấm vào đâu, gõ câu gì. Ảnh là Bài 2, trang 12.
+- **Ảnh 4:** Câu lệnh đã đổi sẵn cho 3 cấp học. Ảnh là Bài 7, trang 23.
 - **Ảnh 5:** 5 tệp đánh số 00 đến 04, mở theo đúng thứ tự.
 - **Ảnh 6:** Chỉ mua qua một link duy nhất trên thebuilder.work.

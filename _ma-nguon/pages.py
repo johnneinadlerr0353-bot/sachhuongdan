@@ -7,11 +7,12 @@ M = json.loads(meta.stdout)
 ORDER, APPX, PARTS = M['ORDER'], M['APPX'], M['PARTS']
 
 doc = fitz.open(sys.argv[1] if len(sys.argv) > 1 else 'book.pdf')
-lines = [[l.strip() for l in p.get_text().split('\n')] for p in doc]
+raw = [[l.strip() for l in p.get_text().split('\n')] for p in doc]
+lines = [[l.upper() for l in ls] for ls in raw]
 found = {}
 
-def first(pred, key):
-    for i, ls in enumerate(lines):
+def first(pred, key, src=None):
+    for i, ls in enumerate(src or lines):
         if pred(ls):
             found[key] = i + 1
             return
@@ -23,16 +24,16 @@ first(lambda ls: 'MỤC LỤC' in ls, 'TOC')
 first(lambda ls: 'CĂN CỨ BIÊN SOẠN' in ls, 'BASIS')
 for letter, pt in PARTS.items():
     if letter == 'P':
-        first(lambda ls, t=pt['title']: 'PHỤ LỤC' in ls and t in ls, 'PART_P')
+        first(lambda ls, t=pt['title'].upper(): 'PHỤ LỤC' in ls and t in ls, 'PART_P')
     else:
-        first(lambda ls, n=pt['no'], t=pt['title']: f'PHẦN {n}' in ls and t in ls, 'PART_' + letter)
+        first(lambda ls, n=pt['no'], t=pt['title'].upper(): f'PHẦN {n}' in ls and t in ls, 'PART_' + letter)
 part_of = {}
 for code in ORDER:
     part_of[code] = PARTS[code[0]]['no']
 for i, code in enumerate(ORDER):
-    first(lambda ls, k=f"PHẦN {part_of[code]} · BÀI {i+1}": k in ls, code)
+    first(lambda ls, k=f"PHẦN {part_of[code]} · BÀI {i+1}": k in ls, code, raw)
 for i, code in enumerate(APPX):
-    first(lambda ls, k=f"PHỤ LỤC {i+1}": k in ls, code)
+    first(lambda ls, k=f"PHỤ LỤC {i+1}": k in ls, code, raw)
 found['TOTAL'] = len(doc)
 old = json.load(open('pages.json')) if __import__('os').path.exists('pages.json') else {}
 json.dump(found, open('pages.json', 'w'), ensure_ascii=False, indent=0)

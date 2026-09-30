@@ -15,10 +15,10 @@ Sổ tay cầm tay chỉ việc dùng AI cho giáo viên Mầm non, Tiểu học
 
 | Tệp | Số trang | Mở khi nào |
 |---|---|---|
-| 00-DOC-DAU-TIEN-Huong-dan-su-dung | 8 | Đầu tiên |
-| 01-Sach-Day-cung-AI | 76 (36 bài, 4 phụ lục) | Sau tệp 00 |
+| 00-DOC-DAU-TIEN-Huong-dan-su-dung | 10 | Đầu tiên |
+| 01-Sach-Day-cung-AI | 79 (36 bài, 4 phụ lục) | Sau tệp 00 |
 | 02-The-tra-nhanh-1-trang | 1 | Sau Bài 3, in ra dùng |
-| 03-Thu-vien-cau-lenh | 20 | Khi cần sao chép nhanh |
+| 03-Thu-vien-cau-lenh | 22 | Khi cần sao chép nhanh |
 | 04-Slide-tap-huan | 24 slide | Khi tập huấn cho đồng nghiệp |
 
 Mọi tệp đều có bản PDF để đọc. Bản Word và PowerPoint dùng khi cần chỉnh sửa.
@@ -26,8 +26,20 @@ Mọi tệp đều có bản PDF để đọc. Bản Word và PowerPoint dùng k
 ## Kiểm tra số trang
 
 - Mọi chỗ ghi "Bài mấy (trang mấy)" được điền tự động từ bản PDF của sách.
-- Đã kiểm tra bằng máy: 197 tham chiếu trong tệp 00, 01, 03 và 32 tham chiếu trong tệp 02, 04. Không có tham chiếu nào sai.
+- Đã kiểm tra bằng máy: 195 tham chiếu trong tệp 00, 01, 03 và 32 tham chiếu trong tệp 02, 04. Không có tham chiếu nào sai.
 - Mỗi bài bắt đầu ở đầu một trang mới.
+
+## Trình bày văn bản
+
+Tệp 00, 01, 03 trình bày theo Phụ lục I, Nghị định 30/2020/NĐ-CP về công tác văn thư:
+
+- Khổ A4, phông Times New Roman, chữ màu đen, cỡ chữ 13 (tiêu đề 14).
+- Lề trên 20 mm, lề dưới 20 mm, lề trái 30 mm, lề phải 15 mm.
+- Căn đều hai lề, đoạn văn lùi đầu dòng 1 cm, khoảng cách giữa các đoạn tối thiểu 6pt, dãn dòng 1,25.
+- Số trang bằng chữ số Ả Rập, đặt giữa lề trên, không đánh số trang đầu.
+- Không dùng dấu mũi tên trong văn bản.
+
+Trang bìa, hình minh họa, slide và ảnh bán hàng là ấn phẩm trình bày, giữ màu thiết kế.
 
 ## Màu sắc
 
