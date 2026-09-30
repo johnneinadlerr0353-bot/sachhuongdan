@@ -3,6 +3,7 @@
 module.exports = [
 ['cover'],
 ['howto'],
+['basisTable'],
 
 // ===================== PHẦN A =====================
 ['part', 'PHẦN A', 'Bắt đầu từ số 0', 'Dành cho thầy cô chưa từng mở một công cụ AI nào. Đọc 3 bài này trước, mất khoảng 20 phút.'],
@@ -524,6 +525,7 @@ module.exports = [
 ['lesson', 'F1', 'Khung năng lực AI cho giáo viên của UNESCO'],
 ['p', 'UNESCO đưa ra khung năng lực AI cho giáo viên gồm **5 lĩnh vực**, mỗi lĩnh vực đi qua **3 cấp độ**: Tiếp thu (biết dùng), Đào sâu (dùng thành thạo vào dạy học), Sáng tạo (tự thiết kế cách dùng mới). Cuốn sách này đưa thầy cô đi hết cấp độ Tiếp thu và bước vào cấp độ Đào sâu.'],
 ['img', 'h14-unesco', 'Hình F1. Năm lĩnh vực năng lực AI của giáo viên.'],
+['p', 'Ở Việt Nam, Quyết định 3439/QĐ-BGDĐT (15/12/2025) cũng xây dựng nội dung giáo dục AI cho học sinh phổ thông theo 4 mạch, trong đó có **tư duy lấy con người làm trung tâm** và **đạo đức AI**. Luật Trí tuệ nhân tạo 2025 khẳng định AI là công cụ hỗ trợ, con người quyết định cuối cùng. Vì vậy mọi bài trong sách đều kết thúc bằng bước **Kiểm** của giáo viên.'],
 ['bullets', [
   '**Tư duy lấy con người làm trung tâm:** AI hỗ trợ, con người quyết định. Thầy cô chịu trách nhiệm cuối cùng với mọi nội dung đưa vào lớp.',
   '**Đạo đức AI:** tôn trọng quyền riêng tư, bản quyền, công bằng giữa các học sinh.',
@@ -542,6 +544,8 @@ module.exports = [
   'Không có thông tin cá nhân của học sinh hay phụ huynh.',
   'Đề kiểm tra: mỗi câu trắc nghiệm có đúng 1 đáp án đúng, không trùng câu.',
   'Chatbot cho học sinh: đã tự thử hỏi 5 câu, kể cả câu "xin đáp án" và câu ngoài lề.',
+  'Ảnh, giọng đọc, video do AI tạo ra đã có ghi chú nhận biết, ví dụ "Hình ảnh tạo bởi AI" (Luật Trí tuệ nhân tạo 2025).',
+  'Tài liệu dùng làm nguồn (SGK, bài báo) đã ghi tên tác giả và nguồn gốc (Luật Sở hữu trí tuệ, Điều 25).',
   'Nếu dùng AI hỗ trợ soạn, thầy cô sẵn sàng giải thích với đồng nghiệp, phụ huynh cách mình đã dùng.',
 ]],
 

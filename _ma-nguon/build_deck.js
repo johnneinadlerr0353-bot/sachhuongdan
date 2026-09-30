@@ -57,6 +57,27 @@ function divider(kicker, title, sub, n) {
   s.addNotes('Bốn nhóm việc tương ứng 4 buổi thực hành: Buổi 1 kỹ thuật câu lệnh, Buổi 2 kiểm tra đánh giá, Buổi 3 đa phương tiện, Buổi 4 Deep Research và chatbot.');
 }
 
+// Căn cứ biên soạn
+{
+  const s = pres.addSlide();
+  s.background = { color: W };
+  T(s, 'CĂN CỨ BIÊN SOẠN', { x: 0.6, y: 0.4, w: 6, h: 0.3, fontSize: 11, color: Y, charSpacing: 8 });
+  T(s, 'Dựa trên văn bản 2025-2026, hướng tới 2030', { x: 0.6, y: 0.7, w: 8.8, h: 0.6, fontSize: 26, fontFace: SF });
+  const rows = [
+    ['Chiến lược quốc gia về AI đến 2030', 'QĐ 1671/QĐ-TTg · 28/8/2026', 'AI là năng lực cốt lõi quốc gia'],
+    ['Phát triển nhân lực AI đến 2030', 'QĐ 1528/QĐ-TTg · 2026', 'Nâng năng lực AI của người lao động'],
+    ['Đột phá phát triển giáo dục', 'NQ 71-NQ/TW · 22/8/2025', 'Mục tiêu giáo dục đến 2030, 2045'],
+    ['Luật Trí tuệ nhân tạo', '134/2025/QH15 · hiệu lực 01/3/2026', 'Con người quyết định, gắn nhãn nội dung AI'],
+    ['Luật Bảo vệ dữ liệu cá nhân', '91/2025/QH15 · hiệu lực 01/1/2026', 'Không đưa dữ liệu học sinh vào AI'],
+    ['Khung năng lực số cho người học', 'TT 02/2025/TT-BGDĐT', 'Học sinh dùng AI an toàn, trung thực'],
+    ['Hướng dẫn dùng AI dạy học', 'CV 2250 · CV 5835 (2025)', 'Bồi dưỡng giáo viên ứng dụng AI'],
+  ];
+  const tb = [rows.map(r => r)].flat().map((r, i) => r.map((c, j) => ({ text: c, options: { fontFace: j === 0 ? SF : F, fontSize: j === 0 ? 12 : 10, color: j === 1 ? Y : G, border: [{ type: 'none' }, { type: 'none' }, { pt: 0.5, color: 'CFCAC0' }, { type: 'none' }], valign: 'middle' } })));
+  s.addTable(tb, { x: 0.6, y: 1.5, w: 8.8, colW: [3.1, 2.7, 3.0], rowH: 0.4, margin: [0, 0.06, 0, 0] });
+  T(s, 'Danh mục đầy đủ 17 văn bản: trang 4 của sách. Dưới tên mỗi bài có dòng CĂN CỨ.', { x: 0.6, y: 4.75, w: 8.8, h: 0.3, fontSize: 10, italic: true, color: '6B6B6B' });
+  s.addNotes('Nhấn mạnh: bộ tài liệu được đối chiếu với văn bản pháp luật và hướng dẫn chuyên môn hiện hành. Sách là tài liệu tham khảo, không thay thế văn bản gốc.');
+}
+
 imageSlide('h01-vong-lam-viec', 'Vòng làm việc Hỏi, Đọc, Sửa, Kiểm. Nhấn mạnh bước Kiểm: AI có thể bịa số liệu và nguồn. Sách phần A1.');
 imageSlide('h02-khung-chat', 'Sáu vị trí cần biết trên màn hình trò chuyện với AI. Cho học viên mở chatgpt.com hoặc gemini.google.com và tìm đủ 6 vị trí. Sách phần A2.');
 imageSlide('h03-cong-thuc-prompt', 'Sáu mảnh ghép của câu lệnh tốt, tách từ câu lệnh mẫu về quang hợp. Sách phần A3.');

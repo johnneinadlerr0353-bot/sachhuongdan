@@ -48,10 +48,12 @@ module.exports = [
   'Nhiều công cụ AI quy định **độ tuổi tối thiểu** trong điều khoản sử dụng (thường là 13 tuổi, dưới 18 tuổi cần phụ huynh đồng ý). Thầy cô kiểm tra điều khoản của từng công cụ trước khi cho học sinh dùng trực tiếp.',
   'Với **mầm non và tiểu học**: giáo viên dùng AI để soạn học liệu. Trẻ chỉ tiếp xúc với **sản phẩm cuối** (ảnh, bài hát, trò chơi) đã được giáo viên kiểm tra.',
   'Với **THCS**: nếu cho học sinh dùng chatbot (bài E4, E5), gửi thông báo cho phụ huynh, nói rõ chatbot dùng để làm gì và không đưa đáp án ngay.',
-  'Tuân thủ quy định của nhà trường và cơ quan quản lý giáo dục về sử dụng công nghệ, bảo vệ dữ liệu cá nhân.',
+  'Dữ liệu cá nhân của học sinh được bảo vệ theo **Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15** (hiệu lực từ 01/1/2026). Không dán họ tên, ảnh, điểm số, thông tin sức khỏe của học sinh vào công cụ AI.',
+  'Khi hướng dẫn học sinh dùng AI, bám theo **Khung năng lực số cho người học** (Thông tư 02/2025/TT-BGDĐT): dùng an toàn, có trách nhiệm, trung thực.',
+  'Tuân thủ quy định của nhà trường và cơ quan quản lý giáo dục về sử dụng công nghệ.',
 ]],
 ['lesson', '3.4', 'Minh bạch khi dùng AI'],
-['p', 'Khi học liệu có phần do AI hỗ trợ tạo ra (ảnh, bài hát, giọng đọc), nên ghi chú nhỏ "Có sử dụng AI hỗ trợ". Điều này giúp học sinh hiểu cách dùng AI đúng đắn và tránh hiểu lầm với đồng nghiệp, phụ huynh.'],
+['p', '**Luật Trí tuệ nhân tạo số 134/2025/QH15** (hiệu lực từ 01/3/2026) yêu cầu nội dung do AI tạo ra có dấu hiệu nhận biết phù hợp. Khi học liệu có phần do AI hỗ trợ tạo ra (ảnh, bài hát, giọng đọc), hãy ghi chú nhỏ "Có sử dụng AI hỗ trợ". Điều này giúp học sinh hiểu cách dùng AI đúng đắn và tránh hiểu lầm với đồng nghiệp, phụ huynh.'],
 
 ['part', 'MỤC 4', 'Lộ trình tự học 7 ngày', 'Mỗi ngày khoảng 30 phút. Mỗi ngày kết thúc bằng một sản phẩm dùng được ngay cho lớp mình.'],
 ['table', ['Ngày', 'Học phần', 'Sản phẩm cuối ngày'], [
@@ -95,10 +97,12 @@ module.exports = [
 
 ['part', 'MỤC 7', 'Nếu dùng bộ tài liệu để tập huấn cho đồng nghiệp', 'Gợi ý chia 4 buổi, khớp với 4 phần của sách và slide.'],
 ['table', ['Buổi', 'Nội dung', 'Hoạt động thực hành'], [
-  ['1', 'Phần A, B · Slide 1 đến 9', 'Mỗi người chạy 4 kỹ thuật trên cùng một bài dạy của mình, rồi tự chấm câu lệnh theo 6 mảnh ghép.'],
-  ['2', 'Phần C · Slide 10 đến 13', 'Theo tổ chuyên môn: làm 1 đề 10 câu theo 4 ngăn và 1 rubric. Đổi đề cho nhau để kiểm tra.'],
-  ['3', 'Phần D · Slide 14 đến 16', 'Mỗi nhóm làm 1 bộ học liệu cho cùng một bài: ảnh, trò chơi, bài hát hoặc giọng đọc.'],
-  ['4', 'Phần E, F · Slide 17 đến 23', 'Mỗi người tạo 1 chatbot, nhờ đồng nghiệp đóng vai học sinh "xin đáp án" để thử.'],
+  ['1', 'Phần A, B · Slide 1 đến 10', 'Mỗi người chạy 4 kỹ thuật trên cùng một bài dạy của mình, rồi tự chấm câu lệnh theo 6 mảnh ghép.'],
+  ['2', 'Phần C · Slide 11 đến 14', 'Theo tổ chuyên môn: làm 1 đề 10 câu theo 4 ngăn và 1 rubric. Đổi đề cho nhau để kiểm tra.'],
+  ['3', 'Phần D · Slide 15 đến 17', 'Mỗi nhóm làm 1 bộ học liệu cho cùng một bài: ảnh, trò chơi, bài hát hoặc giọng đọc.'],
+  ['4', 'Phần E, F · Slide 18 đến 24', 'Mỗi người tạo 1 chatbot, nhờ đồng nghiệp đóng vai học sinh "xin đáp án" để thử.'],
 ]],
 ['tip', 'Trước mỗi buổi: kiểm tra mạng phòng tập huấn mở được các trang ở Mục 2.2. Nhắc học viên mang máy tính và nhớ mật khẩu Gmail.'],
+['pb'],
+['basisTable'],
 ];

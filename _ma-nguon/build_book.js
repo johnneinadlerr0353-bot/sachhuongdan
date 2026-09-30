@@ -10,6 +10,8 @@ const {
 
 const MODE = process.argv[2] || 'book';
 const OUT = process.argv[3] || 'book.docx';
+const { GROUPS, DOCS, PER_LESSON } = require('./basis.js');
+const shortRef = d => d[0].startsWith('L') ? d[2].replace(' (sửa đổi 2022)', '') + ' ' + d[3].split(/[,:]/)[0].replace('Luật số ', '') : d[3].split(',')[0].split(' ngày')[0].split(' (')[0];
 const C = require(MODE === 'guide' ? './guide.js' : './content.js');
 const TITLE = MODE === 'library' ? 'Thư viện câu lệnh' : MODE === 'guide' ? 'Hướng dẫn trước khi sử dụng' : 'Dạy cùng AI';
 
@@ -85,11 +87,11 @@ function levelsTable(lv) {
 
 function simpleTable(head, rows) {
   const n = head.length;
-  const widths = n === 3 ? (/^(Ngày|Buổi)$/.test(head[0]) ? [1000, 3000, CW - 4000] : head[0].startsWith('Công cụ') ? [3400, 1900, CW - 5300] : [4200, 1700, CW - 5900]) : [3200, CW - 3200];
+  const widths = n === 3 ? (head[0].startsWith('Văn bản') ? [3900, CW - 5300, 1400] : /^(Ngày|Buổi)$/.test(head[0]) ? [1000, 3000, CW - 4000] : head[0].startsWith('Công cụ') ? [3400, 1900, CW - 5300] : [4200, 1700, CW - 5900]) : [3200, CW - 3200];
   const cell = (t, i, fill, bold, color) => new TableCell({ width: { size: widths[i], type: WidthType.DXA }, shading: { type: ShadingType.CLEAR, fill, color: 'auto' }, borders: noBorders, margins: { top: 90, bottom: 90, left: 160, right: 160 }, children: [new Paragraph({ children: runs(t, { size: 20, bold, color }) })] });
   return [new Table({ width: { size: CW, type: WidthType.DXA }, columnWidths: widths, rows: [
     new TableRow({ tableHeader: true, children: head.map((h, i) => cell(h, i, G, true, W)) }),
-    ...rows.map((r, ri) => new TableRow({ children: r.map((t, i) => cell(t, i, ri % 2 ? W : GT, i === 0)) })),
+    ...rows.map((r, ri) => new TableRow({ children: r.map((t, i) => cell(t, i, ri % 2 ? W : GT, i === 0 && !head[0].startsWith('Văn bản'))) })),
   ] }), spacer(200)];
 }
 
@@ -158,7 +160,20 @@ function render(block) {
     ];
     case 'howto': return howto();
     case 'part': return heading1(a[0], a[1], a[2]);
-    case 'lesson': return [heading2(a[0], a[1])];
+    case 'lesson': {
+      const out = [heading2(a[0], a[1])];
+      const refs = PER_LESSON[a[0]];
+      if (refs && MODE !== 'library') out.push(new Paragraph({ spacing: { after: 140 }, children: [new TextRun({ text: 'CĂN CỨ  ', size: 15, color: Y, font: FONT, characterSpacing: 40 }), new TextRun({ text: refs.map(r => shortRef(DOCS.find(d => d[0] === r))).join('  ·  '), size: 17, italics: true, color: '6B6B6B', font: FONT })] }));
+      return out;
+    }
+    case 'basisTable': return [
+      ...heading1('CĂN CỨ BIÊN SOẠN', 'Sách dựa trên văn bản nào', 'Các bài được đối chiếu với văn bản pháp luật và hướng dẫn chuyên môn dưới đây, ưu tiên văn bản ban hành 2025-2026 và định hướng đến năm 2030. Dưới tên mỗi bài có dòng CĂN CỨ ghi văn bản liên quan. Sách là tài liệu tham khảo thực hành của tác giả, không phải văn bản của cơ quan nhà nước và không thay thế văn bản gốc. Thầy cô luôn làm theo văn bản hiện hành và hướng dẫn của nhà trường.'),
+      ...GROUPS.flatMap(([g, gname]) => [
+        new Paragraph({ keepNext: true, spacing: { before: 200, after: 80 }, children: [new TextRun({ text: gname.toUpperCase(), size: 16, color: Y, font: FONT, characterSpacing: 40 })] }),
+        ...simpleTable(['Văn bản · số hiệu, ngày', 'Sách dựa vào điểm nào', 'Bài'], DOCS.filter(d => d[1] === g).map(d => ['**' + d[2] + '**. ' + d[3], d[4], d[5]])),
+      ]),
+      new Paragraph({ children: [new PageBreak()] }),
+    ];
     case 'p': return [P(a[0])];
     case 'img': return img(a[0], a[1]);
     case 'pb': return [new Paragraph({ children: [new PageBreak()] })];
