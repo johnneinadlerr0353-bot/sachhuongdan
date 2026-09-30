@@ -8,7 +8,7 @@ Sổ tay cầm tay chỉ việc dùng AI cho giáo viên Mầm non, Tiểu học
 |---|---|
 | `BO-TAI-LIEU-GUI-KHACH/` | 5 tệp khách nhận được, đánh số 00 đến 04 theo thứ tự mở |
 | `Day-cung-AI-tron-bo.zip` | Gói nén của thư mục trên, dùng để tải lên thebuilder.work |
-| `ANH-DANG-BAN/` | 6 ảnh đăng bán (1080×1350) và nội dung 6 bài đăng |
+| `ANH-DANG-BAN/` | 6 ảnh đăng bán (1080×1350) theo trình tự người mua tự hỏi, và nội dung bài đăng |
 | `_ma-nguon/` | Tệp nguồn để sửa nội dung rồi dựng lại |
 
 ## Thứ tự tệp gửi khách
@@ -40,8 +40,9 @@ Quy tắc tương phản: chữ trên nền trắng hoặc nền bạc hà luôn
 
 ## Chỗ cần điền trước khi bán
 
-- `[Tên tác giả]`: bìa sách, thư gửi thầy cô, ảnh bán 6.
+- `[Tên tác giả]`: bìa sách, thư gửi thầy cô, ảnh bán 1 và 6.
 - `[EMAIL CỦA BẠN]`: tệp 00, slide cuối, ảnh bán 6, bài đăng.
+- `[DÁN LINK SẢN PHẨM TRÊN THEBUILDER.WORK]`: dòng đầu bài đăng.
 
 Điền trong `_ma-nguon/book2.js`, `guide2.js`, `deck2.js`, `sales6.py`, rồi dựng lại.
 
@@ -61,6 +62,10 @@ node deck2.js
 python3 cheatsheet.py
 python3 sales6.py && node render.js sales_html sales_png
 ```
+
+## Ảnh đăng bán
+
+6 ảnh xếp theo câu người mua tự hỏi: Cái gì? → Có đúng quy định không? → Mình có làm được không? → Có hợp lớp mình không? → Mua về nhận được gì? → Mua có an toàn không? Ảnh 2, 3, 4 là trang chụp nguyên văn từ sách, có ghi số trang.
 
 ## Căn cứ biên soạn
 

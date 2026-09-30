@@ -84,7 +84,8 @@ module.exports = [
 ['section', 'MỤC 7', 'Về bộ tài liệu này'],
 ['bullets', [
   'Đây là **sản phẩm cá nhân của tác giả**, không phải tài liệu của cơ quan nhà nước.',
-  'Mua chính thức trên **The Builder (thebuilder.work)**, nền tảng bán sản phẩm số cho người Việt. Người mua thanh toán bằng cách quét mã **VietQR** trên nền tảng. Không giao dịch ngoài.',
+  'Chỉ bán qua một đường link duy nhất trên **The Builder (thebuilder.work)**. Người mua thanh toán bằng cách quét mã **VietQR** ngay trên trang.',
+  'Tác giả **không bao giờ** nhắn tin riêng xin chuyển khoản vào tài khoản cá nhân, không gửi link mua nào khác, không hỏi mã OTP hay mật khẩu ngân hàng. Nếu thầy cô gặp trường hợp như vậy, đó không phải tác giả.',
   'Trường hoặc tổ chuyên môn cần **đào tạo riêng online**: liên hệ [EMAIL CỦA BẠN].',
 ]],
 ['pb'],
