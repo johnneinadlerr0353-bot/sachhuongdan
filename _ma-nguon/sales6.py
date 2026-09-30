@@ -40,7 +40,7 @@ def build(src):
 {cite('Hình trong sách · ' + bai('A2') + ', trang ' + str(P['A2']), 'left:430px;top:410px')}
 <div style="position:absolute;left:470px;top:800px;font-family:{HAND};font-size:30px;line-height:1.15">sách chỉ từng chỗ bấm,<br/>từng câu gõ vào AI</div>
 <div style="position:absolute;left:72px;right:72px;top:930px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px">
-<div style="background:{G};color:{W};border-radius:16px;padding:22px 20px"><div style="font-size:25px;font-weight:800;line-height:1.25">Soạn theo văn bản 2025-2026</div><div style="font-size:18px;margin-top:8px;color:{M}">Luật Trí tuệ nhân tạo, Thông tư 02/2025...</div></div>
+<div style="background:{G};color:{W};border-radius:16px;padding:22px 20px"><div style="font-size:25px;font-weight:800;line-height:1.25">Soạn theo văn bản Bộ GDĐT 2026</div><div style="font-size:18px;margin-top:8px;color:{M}">Thông tư 18/2026, CV 5385, CV 5208</div></div>
 <div style="background:{MT};border-radius:16px;padding:22px 20px"><div style="font-size:25px;font-weight:800;line-height:1.25">36 bài cầm tay chỉ việc</div><div style="font-size:18px;margin-top:8px">Mỗi bài một việc, làm theo là xong</div></div>
 <div style="background:{MT};border-radius:16px;padding:22px 20px"><div style="font-size:25px;font-weight:800;line-height:1.25">Đổi sẵn cho 3 cấp học</div><div style="font-size:18px;margin-top:8px">Mầm non, Tiểu học, THCS</div></div>
 </div>
@@ -50,20 +50,20 @@ def build(src):
     # 2. CÓ ĐÚNG QUY ĐỊNH KHÔNG
     row = lambda a, b: f'<div style="padding:10px 0;border-top:2px solid {MT}"><div style="font-size:19px;font-weight:800">{a}</div><div style="font-size:18px;line-height:1.35">{b}</div></div>'
     s2 = f"""<div style="{base}">{ask(2, 'Tài liệu này có đúng quy định không?')}
-{h1('Có. Soạn theo ' + hl('văn bản 2025-2026') + ', hướng tới năm 2030.', 118, 52)}
+{h1('Có. Soạn theo ' + hl('văn bản mới nhất') + ' của Bộ GDĐT năm 2026.', 118, 52)}
 {cite('Trích nguyên văn · Sách, trang ' + str(P['BASIS']) + ': Sách dựa trên văn bản nào', 'left:72px;top:300px')}
 <div style="position:absolute;left:72px;top:350px;width:560px;height:640px;overflow:hidden;border:2px solid {G};{shadow}">{img('crop-basis','width:560px')}</div>
 <div style="position:absolute;left:660px;top:350px;width:348px">
-<div style="font-size:22px;font-weight:800;margin-bottom:6px">17 văn bản, ví dụ:</div>
-{row('Luật 134/2025/QH15', 'Luật Trí tuệ nhân tạo, hiệu lực 01/3/2026')}
-{row('Luật 91/2025/QH15', 'Luật Bảo vệ dữ liệu cá nhân')}
-{row('QĐ 1671/QĐ-TTg', 'Chiến lược quốc gia về AI đến 2030')}
-{row('NQ 71-NQ/TW', 'Đột phá phát triển giáo dục')}
-{row('TT 02/2025/TT-BGDĐT', 'Khung năng lực số cho người học')}
-{row('CV 2250, CV 5835 (2025)', 'Hướng dẫn dùng AI, bồi dưỡng giáo viên')}
+<div style="font-size:22px;font-weight:800;margin-bottom:6px">Đứng đầu danh sách:</div>
+{row('Thông tư 18/2026/TT-BGDĐT', 'Khung năng lực số của giáo viên. AI là một miền năng lực riêng')}
+{row('CV 5385/BGDĐT-GDMN', 'Nhiệm vụ Mầm non năm học 2026-2027')}
+{row('CV 5208/BGDĐT-GDPT', 'Nhiệm vụ Phổ thông năm học 2026-2027')}
+{row('QĐ 2422 · CV 5588 (8/2026)', 'Giáo dục AI cho học sinh từ năm học 2026-2027')}
+{row('Chỉ thị 31/CT-TTg (8/2026)', 'Ứng dụng AI có kiểm soát trong năm học mới')}
+{row('Luật 134/2025 · Luật 91/2025', 'Luật Trí tuệ nhân tạo, Luật Bảo vệ dữ liệu cá nhân')}
 <div style="border-top:2px solid {MT}"></div>
 </div>
-<div style="position:absolute;left:72px;right:72px;top:1030px;background:{MT};border-radius:16px;padding:20px 24px;font-size:21px;line-height:1.45">Đầu mỗi bài có dòng <b>Căn cứ</b> ghi văn bản liên quan. Sách là tài liệu tham khảo của tác giả, không thay thế văn bản gốc.</div>
+<div style="position:absolute;left:72px;right:72px;top:1030px;background:{MT};border-radius:16px;padding:20px 24px;font-size:21px;line-height:1.45">20 văn bản, xếp theo thứ tự: Bộ GDĐT 2026 → văn bản chuyên môn → Sở GDĐT → luật liên quan. Đầu mỗi bài có dòng <b>Căn cứ</b>.</div>
 {cta()}</div>"""
 
     # 3. MÌNH CÓ LÀM ĐƯỢC KHÔNG

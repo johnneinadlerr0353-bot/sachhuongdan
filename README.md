@@ -15,8 +15,8 @@ Sổ tay cầm tay chỉ việc dùng AI cho giáo viên Mầm non, Tiểu học
 
 | Tệp | Số trang | Mở khi nào |
 |---|---|---|
-| 00-DOC-DAU-TIEN-Huong-dan-su-dung | 7 | Đầu tiên |
-| 01-Sach-Day-cung-AI | 74 (36 bài, 4 phụ lục) | Sau tệp 00 |
+| 00-DOC-DAU-TIEN-Huong-dan-su-dung | 8 | Đầu tiên |
+| 01-Sach-Day-cung-AI | 76 (36 bài, 4 phụ lục) | Sau tệp 00 |
 | 02-The-tra-nhanh-1-trang | 1 | Sau Bài 3, in ra dùng |
 | 03-Thu-vien-cau-lenh | 20 | Khi cần sao chép nhanh |
 | 04-Slide-tap-huan | 24 slide | Khi tập huấn cho đồng nghiệp |
@@ -26,7 +26,7 @@ Mọi tệp đều có bản PDF để đọc. Bản Word và PowerPoint dùng k
 ## Kiểm tra số trang
 
 - Mọi chỗ ghi "Bài mấy (trang mấy)" được điền tự động từ bản PDF của sách.
-- Đã kiểm tra bằng máy: 189 tham chiếu trong tệp 00, 01, 03 và 26 tham chiếu trong tệp 02, 04. Không có tham chiếu nào sai.
+- Đã kiểm tra bằng máy: 197 tham chiếu trong tệp 00, 01, 03 và 32 tham chiếu trong tệp 02, 04. Không có tham chiếu nào sai.
 - Mỗi bài bắt đầu ở đầu một trang mới.
 
 ## Màu sắc
@@ -69,4 +69,9 @@ python3 sales6.py && node render.js sales_html sales_png
 
 ## Căn cứ biên soạn
 
-Danh mục 17 văn bản nằm ở `_ma-nguon/basis.js` và ở trang 6 của sách.
+Danh mục 20 văn bản nằm ở `_ma-nguon/basis.js` và ở trang 6 của sách, xếp theo thứ tự ưu tiên cho giáo viên:
+
+1. Văn bản của Bộ GDĐT năm 2026: Thông tư 18/2026/TT-BGDĐT, Công văn 5385/BGDĐT-GDMN, Công văn 5208/BGDĐT-GDPT, Quyết định 2422/QĐ-BGDĐT, Công văn 5588/BGDĐT-GDPT, Chỉ thị 31/CT-TTg.
+2. Văn bản chuyên môn đang áp dụng: chương trình GDPT, GDMN, Thông tư 02/2025, Công văn 2250, Công văn 7991, Thông tư 22/2021, Thông tư 27/2020.
+3. Văn bản của Sở GDĐT nơi giáo viên công tác.
+4. Luật và định hướng liên quan: Luật 134/2025/QH15, Luật 91/2025/QH15, Luật Sở hữu trí tuệ, Nghị quyết 71-NQ/TW, Quyết định 1671/QĐ-TTg, UNESCO 2024.

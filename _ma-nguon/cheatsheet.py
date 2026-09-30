@@ -94,7 +94,7 @@ td:first-child{{font-weight:700;width:34%}}
 <div class="box dark"><h2>KHÔNG dán</h2><p>Họ tên kèm điểm, số điện thoại, địa chỉ, ảnh học sinh, hồ sơ sức khỏe, đề thi chưa công bố.</p></div>
 </div>
 
-<div class="foot"><span>Xuống dòng trong ô nhập: Shift + Enter · Việc mới: bấm Trò chuyện mới</span><span>Căn cứ: Luật Trí tuệ nhân tạo 134/2025 · Luật Bảo vệ dữ liệu cá nhân 91/2025</span></div>
+<div class="foot"><span>Xuống dòng trong ô nhập: Shift + Enter · Việc mới: bấm Trò chuyện mới</span><span>Căn cứ: Thông tư 18/2026/TT-BGDĐT · Luật Bảo vệ dữ liệu cá nhân 91/2025</span></div>
 </div></body></html>
 """
 assert 'Bài 4 đến Bài 7' and M['ORDER'].index('B1') == 3 and M['ORDER'].index('B4') == 6

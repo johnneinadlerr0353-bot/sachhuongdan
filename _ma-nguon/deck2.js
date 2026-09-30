@@ -70,19 +70,19 @@ function divider(no, title, lessons, sub) {
   const s = pres.addSlide();
   s.background = { color: W };
   T(s, 'CĂN CỨ BIÊN SOẠN', { x: 0.6, y: 0.4, w: 6, h: 0.3, fontSize: 12, bold: true });
-  T(s, 'Dựa trên văn bản 2025-2026, hướng tới 2030', { x: 0.6, y: 0.7, w: 8.8, h: 0.6, fontSize: 26, bold: true });
+  T(s, 'Soạn theo văn bản mới nhất của Bộ GDĐT năm 2026', { x: 0.6, y: 0.7, w: 8.8, h: 0.6, fontSize: 26, bold: true });
   const rows = [
-    ['Chiến lược quốc gia về AI đến 2030', 'QĐ 1671/QĐ-TTg · 28/8/2026', 'AI là năng lực cốt lõi quốc gia'],
-    ['Phát triển nhân lực AI đến 2030', 'QĐ 1528/QĐ-TTg · 2026', 'Nâng năng lực AI của người lao động'],
-    ['Đột phá phát triển giáo dục', 'NQ 71-NQ/TW · 22/8/2025', 'Mục tiêu giáo dục đến 2030, 2045'],
-    ['Luật Trí tuệ nhân tạo', '134/2025/QH15 · hiệu lực 01/3/2026', 'Con người quyết định, gắn nhãn nội dung AI'],
-    ['Luật Bảo vệ dữ liệu cá nhân', '91/2025/QH15 · hiệu lực 01/1/2026', 'Không đưa dữ liệu học sinh vào AI'],
-    ['Khung năng lực số cho người học', 'TT 02/2025/TT-BGDĐT', 'Học sinh dùng AI an toàn, trung thực'],
-    ['Hướng dẫn dùng AI dạy học', 'CV 2250 · CV 5835 (2025)', 'Bồi dưỡng giáo viên ứng dụng AI'],
+    ['Khung năng lực số của giáo viên', 'TT 18/2026/TT-BGDĐT · hiệu lực 12/5/2026', 'AI là một miền năng lực riêng'],
+    ['Nhiệm vụ Mầm non 2026-2027', 'CV 5385/BGDĐT-GDMN · 12/8/2026', 'Bồi dưỡng giáo viên ứng dụng AI'],
+    ['Nhiệm vụ Phổ thông 2026-2027', 'CV 5208/BGDĐT-GDPT · 07/8/2026', 'Học sinh dùng AI an toàn, trung thực'],
+    ['Khung nội dung giáo dục AI', 'QĐ 2422/QĐ-BGDĐT · 18/8/2026', 'Giáo dục AI cho học sinh phổ thông'],
+    ['Triển khai giáo dục AI', 'CV 5588/BGDĐT-GDPT · 19/8/2026', '12 tiết/lớp/năm học'],
+    ['Nhiệm vụ trọng tâm năm học', 'Chỉ thị 31/CT-TTg · 05/8/2026', 'Ứng dụng AI có kiểm soát'],
+    ['Luật Trí tuệ nhân tạo · Bảo vệ dữ liệu', '134/2025/QH15 · 91/2025/QH15', 'Con người quyết định, bảo vệ dữ liệu'],
   ];
   const tb = rows.map((r, i) => r.map((c, j) => ({ text: c, options: { fontFace: F, fontSize: j === 0 ? 12 : 10.5, bold: j === 0, color: G, fill: { color: i % 2 ? W : MT }, valign: 'middle' } })));
   s.addTable(tb, { x: 0.6, y: 1.45, w: 8.8, colW: [3.1, 2.7, 3.0], rowH: 0.4, margin: [0, 0.08, 0, 0.08], border: { type: 'none' } });
-  refPill(s, `Đầy đủ 17 văn bản: sách, trang ${PG.BASIS}`);
+  refPill(s, `Đầy đủ 20 văn bản: sách, trang ${PG.BASIS}`);
   s.addNotes('Bộ tài liệu đối chiếu với văn bản pháp luật và hướng dẫn chuyên môn. Sách là tài liệu tham khảo của tác giả, không thay thế văn bản gốc.');
 }
 

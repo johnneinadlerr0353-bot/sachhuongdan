@@ -10,7 +10,7 @@ module.exports = [
 
 ['lesson', 'A1', 'AI là trợ lý, thầy cô là người quyết định'],
 ['p', 'Trí tuệ nhân tạo (AI) trong sách này là loại **AI tạo sinh**: thầy cô gõ một câu yêu cầu bằng tiếng Việt, AI viết lại cho mình một đoạn văn, một bảng, một bức ảnh hay một bài hát. Câu yêu cầu đó gọi là **câu lệnh**, tiếng Anh là **prompt**. Cả cuốn sách thực chất chỉ dạy một việc: viết câu lệnh sao cho AI hiểu đúng ý mình.'],
-['img', 'h01-vong-lam-viec', 'Hình A1. Vòng làm việc 4 bước với AI: Hỏi, Đọc, Sửa, Kiểm.'],
+['img', 'h01-vong-lam-viec', 'Vòng làm việc 4 bước với AI: Hỏi, Đọc, Sửa, Kiểm.'],
 ['why', 'Vì sao phải có bước KIỂM?', 'AI viết rất trôi chảy nên dễ khiến người đọc tin ngay. Nhưng AI có thể "bịa" ra số liệu, tên tác giả hoặc nguồn không có thật. Hiện tượng này thường được gọi là **ảo giác AI**. Vì vậy mọi nội dung đưa cho học sinh đều phải qua mắt thầy cô trước.'],
 
 ['lesson', 'A2', 'Mở công cụ và gõ câu lệnh đầu tiên'],
@@ -23,7 +23,7 @@ module.exports = [
   'Chờ vài giây. Đọc hết câu trả lời. Muốn lấy nội dung, bấm **biểu tượng sao chép** ở cuối câu trả lời rồi dán vào Word.',
 ]],
 ['prompt', 'Câu lệnh đầu tiên (sao chép nguyên văn)', ['Cho tôi gợi ý bài giảng về chủ đề quá trình quang hợp.']],
-['img', 'h02-khung-chat', 'Hình A2. Sáu vị trí có ở hầu hết công cụ trò chuyện với AI. Tên nút có thể khác đôi chút giữa các công cụ.'],
+['img', 'h02-khung-chat', 'Sáu vị trí có ở hầu hết công cụ trò chuyện với AI. Tên nút có thể khác đôi chút giữa các công cụ.'],
 ['bullets', [
   '**Muốn AI sửa:** không cần gõ lại từ đầu. Gõ tiếp ngay bên dưới, ví dụ: "Viết ngắn lại một nửa", "Thêm 1 trò chơi khởi động".',
   '**Làm việc mới:** bấm **Trò chuyện mới** (New chat). Nếu viết chung một cuộc, AI sẽ trộn yêu cầu cũ vào việc mới.',
@@ -42,13 +42,13 @@ module.exports = [
   'Đóng vai trò như một gia sư giỏi, chia nhỏ và giải thích những vấn đề phức tạp một cách dễ hiểu.',
   'Tôi muốn bạn giải thích quá trình quang hợp, cho một học sinh 14 tuổi, để hỗ trợ chuẩn bị cho kỳ thi sinh học. Câu trả lời của bạn nên có 300 từ, được viết bằng giọng điệu thân thiện và giáo dục.',
 ]],
-['img', 'h03-cong-thuc-prompt', 'Hình A3. Tách câu lệnh mẫu thành 6 mảnh ghép.'],
+['img', 'h03-cong-thuc-prompt', 'Tách câu lệnh mẫu thành 6 mảnh ghép.'],
 ['why', 'Vì sao lại chọn đúng những cụm từ này?', '"**Đóng vai trò như một gia sư giỏi**" cho AI biết nên nói chuyện như người dạy kèm, không như sách giáo khoa. "**Chia nhỏ và giải thích**" nói luôn cách dạy. "**Học sinh 14 tuổi**" quyết định độ khó của từ ngữ. "**Để hỗ trợ chuẩn bị cho kỳ thi**" nhắc AI tập trung vào ý dễ ra đề. "**300 từ**" giới hạn độ dài. "**Thân thiện và giáo dục**" chọn giọng văn. Bỏ bất kỳ cụm nào, AI sẽ tự đoán phần đó.'],
 ['tip', 'Mẹo ghi nhớ: trước khi bấm gửi, đọc lại câu lệnh và tự hỏi: AI đã biết **Ai nói? Nói cho ai? Để làm gì? Dài bao nhiêu? Giọng thế nào?** chưa.'],
 
 // ===================== PHẦN B =====================
 ['part', 'PHẦN B', 'Buổi 1 · Kỹ thuật viết câu lệnh', 'Bốn kỹ thuật cơ bản, cách tự chấm câu lệnh và cách nhờ AI soạn bài giảng.'],
-['img', 'h04-ky-thuat-prompt', 'Hình B. Bốn kỹ thuật viết câu lệnh, xếp từ đơn giản đến đầy đủ.'],
+['img', 'h04-ky-thuat-prompt', 'Bốn kỹ thuật viết câu lệnh, xếp từ đơn giản đến đầy đủ.'],
 
 ['lesson', 'B1', 'Kỹ thuật Zero-shot'],
 ['why', 'Vì sao gọi là "Zero-shot"?', '"Shot" nghĩa là một ví dụ mẫu. "Zero-shot" là hỏi mà **không đưa ví dụ nào**, AI tự làm dựa trên hiểu biết sẵn có. Đây là cách hỏi nhanh nhất, hợp khi thầy cô cần ý tưởng thô.'],
@@ -109,7 +109,7 @@ module.exports = [
 ['p', 'Cách tự chấm một câu lệnh: đối chiếu với 6 mảnh ghép ở {{A3}}. Thiếu mảnh nào thì thêm mảnh đó.'],
 ['prompt', 'Prompt cần đánh giá', ['Tìm cho tôi 3 nguyên nhân chính gây ra ô nhiễm không khí ở các thành phố lớn để sử dụng trong bài thuyết trình.']],
 ['prompt', 'Prompt cải thiện', ['Hãy nhập vai một giáo viên môn Địa lý, nhiệt tình và dễ hiểu. Giúp tôi liệt kê 3 nguyên nhân chính gây ra ô nhiễm không khí ở các thành phố lớn, kèm theo mỗi nguyên nhân là một mô tả ngắn từ 2-3 câu. Nội dung sẽ được tôi sử dụng cho bài thuyết trình trong lớp học, vì vậy hãy trình bày ngắn gọn, rõ ràng và dễ nhớ cho học sinh cấp 3.']],
-['img', 'h05-truoc-sau', 'Hình B5. Những cụm từ được thêm vào (tô vàng) chính là các mảnh ghép còn thiếu.'],
+['img', 'h05-truoc-sau', 'Những cụm từ được thêm vào (tô vàng) chính là các mảnh ghép còn thiếu.'],
 ['tip', 'Thầy cô THCS chỉ cần đổi "học sinh cấp 3" thành "học sinh lớp 8". Thầy cô tiểu học đổi thành "học sinh lớp 5" và "mỗi nguyên nhân 1 câu".'],
 
 ['lesson', 'B6', 'Nhờ AI soạn bài giảng và tìm học liệu'],
@@ -120,7 +120,7 @@ module.exports = [
 
 ['lesson', 'B7', 'Mô hình TPACK'],
 ['why', 'TPACK là gì?', 'TPACK là viết tắt tiếng Anh của **Kiến thức Công nghệ, Sư phạm và Nội dung**. Người dạy giỏi với công nghệ phải trả lời cùng lúc 3 câu: **dạy cái gì (CK)**, **dạy bằng cách nào (PK)**, **dùng công cụ gì (TK)**. Câu lệnh TPACK viết đủ 3 dòng này để AI đề xuất ý tưởng nằm ở chỗ giao nhau.'],
-['img', 'h06-tpack', 'Hình B7. Ba vòng tròn CK, PK, TK và vùng giao nhau TPACK.'],
+['img', 'h06-tpack', 'Ba vòng tròn CK, PK, TK và vùng giao nhau TPACK.'],
 ['prompt', 'Câu lệnh TPACK (Khoa học lớp 4)', [
   'Bạn là một giáo viên giỏi với nhiều năm kinh nghiệm, hãy giúp tôi đề xuất các ý tưởng theo mô hình TPACK để dạy bài Vòng tuần hoàn của nước, trong chương trình môn Khoa học cho học sinh lớp 4 theo các kiến thức sau đây:',
   '- Kiến Thức Nội Dung (CK): Chủ đề vòng tuần hoàn của nước trong tự nhiên',
@@ -188,7 +188,7 @@ module.exports = [
 
 ['lesson', 'C5', 'Câu lệnh nâng cao: chia 4 ngăn có tiêu đề #'],
 ['why', 'Vì sao lại dùng dấu #?', 'Khi câu lệnh dài và có nhiều tài liệu, AI dễ lẫn đâu là yêu cầu, đâu là dữ liệu. Dấu **#** tạo tiêu đề lớn, dấu **##** đặt tên cho từng tài liệu. Trong câu lệnh, câu "**Đọc nội dung bài học ở mục ##Nội dung bài học**" chỉ đúng tệp cần đọc.'],
-['img', 'h07-cau-truc-4-muc', 'Hình C5. Bốn ngăn của một câu lệnh nâng cao.'],
+['img', 'h07-cau-truc-4-muc', 'Bốn ngăn của một câu lệnh nâng cao.'],
 ['prompt', 'Câu lệnh gốc: bộ câu hỏi Hóa học 10', [
   '#NGỮ CẢNH',
   'Bạn là một giáo viên Hóa học có chuyên môn vững chắc, nhiều năm kinh nghiệm giảng dạy. Bạn đang giảng dạy môn Hóa học 10 - Bộ sách Cánh diều. Nội dung giảng dạy là cấu tạo nguyên tử',
@@ -214,7 +214,7 @@ module.exports = [
 
 ['lesson', 'C6', 'Đề thi theo ma trận và bản đặc tả'],
 ['why', 'Hiểu đúng các cụm từ', '**Ma trận đề** là bảng thiết kế đề: mỗi nội dung có bao nhiêu câu ở mỗi mức độ. **Bản đặc tả** mô tả cụ thể học sinh phải làm được gì ở từng mức. Có đủ hai tệp này, AI ra đề sát cấu trúc nhà trường yêu cầu.'],
-['img', 'h08-muc-do-nhan-thuc', 'Hình C6. Bốn mức độ nhận thức, dùng nguyên văn định nghĩa để dán vào câu lệnh.'],
+['img', 'h08-muc-do-nhan-thuc', 'Bốn mức độ nhận thức, dùng nguyên văn định nghĩa để dán vào câu lệnh.'],
 ['prompt', 'Câu lệnh gốc: đề Tin học 6 (40 câu)', [
   '#NGỮ CẢNH',
   'Bạn là một giáo viên môn Tin học có chuyên môn vững chắc, nhiều năm kinh nghiệm giảng dạy. Bạn đang giảng dạy môn Tin học lớp 6 - Bộ sách Cánh diều.',
@@ -249,7 +249,7 @@ module.exports = [
   'Ngôn ngữ rõ ràng, dễ hiểu, phù hợp cho cả học sinh và giáo viên sử dụng khi nhận xét/chấm điểm sản phẩm.',
   'Số lượng tiêu chí từ 4 đến 6 tiêu chí, bao quát các khía cạnh: kiến thức môn học, kỹ năng lập trình, giao diện/sự tương tác, tính sáng tạo và mức độ hoàn thiện của trò chơi.',
 ]],
-['img', 'h09-rubric', 'Hình C7. Khung bảng tiêu chí 4 mức mà AI sẽ điền nội dung.'],
+['img', 'h09-rubric', 'Khung bảng tiêu chí 4 mức mà AI sẽ điền nội dung.'],
 ['levels', {
   mn: 'Đổi thành bảng quan sát 3 mức (Thường xuyên, Đôi khi, Chưa thấy) cho hoạt động xếp hình của trẻ 5 tuổi, dùng từ ngữ để giáo viên ghi nhận xét.',
   th: 'Đổi sản phẩm thành "tranh vẽ poster bảo vệ môi trường lớp 3", 4 tiêu chí, ngôn ngữ học sinh lớp 3 đọc hiểu được.',
@@ -282,12 +282,12 @@ module.exports = [
 
 // ===================== PHẦN D =====================
 ['part', 'PHẦN D', 'Buổi 3 · Sản phẩm đa phương tiện', 'Ảnh, trò chơi, truyện tranh, bài hát, giọng đọc, hội thoại: những thứ trước đây phải thuê người làm.'],
-['img', 'h11-ban-do-cong-cu', 'Hình D. Chọn công cụ theo sản phẩm muốn làm.'],
+['img', 'h11-ban-do-cong-cu', 'Chọn công cụ theo sản phẩm muốn làm.'],
 
 ['lesson', 'D1', 'Tạo ảnh với các phong cách'],
 ['prompt', 'Câu lệnh gốc: đổi phần [...] thành tên phong cách', ['Tạo hình ảnh minh họa cho câu chuyện Hai Bà Trưng cưỡi voi theo phong cách [...]']],
 ['p', 'Lần lượt thay [...] bằng **Pixar**, **Anime**, **Ghibli Studio** để thấy cùng một nội dung được vẽ theo 3 kiểu khác nhau.'],
-['img', 'h10-tao-anh', 'Hình D1. Công thức: Nội dung + Phong cách.'],
+['img', 'h10-tao-anh', 'Công thức: Nội dung + Phong cách.'],
 ['prompt', 'Câu lệnh tạo ảnh thực hành', ['Tạo hình ảnh miêu tả cô bé quàng khăn đỏ đang mang bánh cho bà trong truyện Cô bé quàng khăn đỏ']],
 ['levels', {
   mn: 'Tạo hình ảnh chú thỏ trắng đang tưới cây trong vườn rau theo phong cách tranh màu nước, màu sắc tươi sáng, nét vẽ đơn giản cho trẻ mầm non.',
@@ -439,7 +439,7 @@ module.exports = [
 
 ['lesson', 'E1', 'Deep Research: báo cáo chuyên sâu phục vụ giảng dạy'],
 ['why', 'Deep Research khác trò chuyện thường ở đâu?', '**Deep Research** (Nghiên cứu sâu) là chế độ AI tự lập kế hoạch, tự tìm và đọc nhiều trang web, rồi viết báo cáo dài có danh sách nguồn. Mỗi lần chạy mất vài phút. Có trong ChatGPT và Gemini: bấm dấu **+** hoặc mục **Công cụ** trong ô nhập, chọn **Deep Research**.'],
-['img', 'h13-deep-research', 'Hình E1. Quy trình 4 bước khi dùng Deep Research.'],
+['img', 'h13-deep-research', 'Quy trình 4 bước khi dùng Deep Research.'],
 ['prompt', 'Câu lệnh gốc: chủ đề Nước sạch và vệ sinh (Khoa học 4)', [
   'Hãy lập một báo cáo chuyên sâu phục vụ giảng dạy chủ đề "Nước sạch và vệ sinh" trong chương trình Khoa học lớp 4, bao gồm:',
   '- Tổng quan kiến thức về nước sạch và tầm quan trọng đối với sức khỏe học sinh tiểu học',
@@ -465,7 +465,7 @@ module.exports = [
 
 ['lesson', 'E4', 'Xây dựng chatbot trợ giảng với Google Gemini'],
 ['why', 'System prompt là gì?', 'Là **bản hướng dẫn cố định** thầy cô viết một lần cho chatbot. Từ đó mọi học sinh hỏi đều được trả lời theo đúng quy tắc này. Trên Gemini, chatbot riêng gọi là **Gem**.'],
-['img', 'h12-chatbot', 'Hình E4. Bốn bước tạo trợ giảng ảo.'],
+['img', 'h12-chatbot', 'Bốn bước tạo trợ giảng ảo.'],
 ['prompt', 'System prompt gốc: trợ giảng Vật lý 7', [
   'Bạn là một trợ giảng ảo chuyên hỗ trợ giáo viên và học sinh môn Vật lý lớp 7 tại Việt Nam.',
   'Nhiệm vụ chính của bạn là giúp học sinh ôn tập các kiến thức thuộc Chương 1 - Quang học, dựa trên nội dung trong tài liệu đính kèm có tên "Vatly7.pdf", trích từ sách giáo khoa Vật lý lớp 7 - chương trình phổ thông cơ bản hiện hành.',
@@ -523,10 +523,13 @@ module.exports = [
 
 // ===================== PHẦN F =====================
 ['part', 'PHẦN F', 'Dùng AI hiệu quả và có trách nhiệm', 'Những điều cần nhớ để AI giúp mình mà không gây hại cho học sinh.'],
-['lesson', 'F1', 'Khung năng lực AI cho giáo viên của UNESCO'],
-['p', 'UNESCO đưa ra khung năng lực AI cho giáo viên gồm **5 lĩnh vực**, mỗi lĩnh vực đi qua **3 cấp độ**: Tiếp thu (biết dùng), Đào sâu (dùng thành thạo vào dạy học), Sáng tạo (tự thiết kế cách dùng mới). Cuốn sách này đưa thầy cô đi hết cấp độ Tiếp thu và bước vào cấp độ Đào sâu.'],
-['img', 'h14-unesco', 'Hình F1. Năm lĩnh vực năng lực AI của giáo viên.'],
-['p', 'Ở Việt Nam, Quyết định 3439/QĐ-BGDĐT (15/12/2025) cũng xây dựng nội dung giáo dục AI cho học sinh phổ thông theo 4 mạch, trong đó có **tư duy lấy con người làm trung tâm** và **đạo đức AI**. Luật Trí tuệ nhân tạo 2025 khẳng định AI là công cụ hỗ trợ, con người quyết định cuối cùng. Vì vậy mọi bài trong sách đều kết thúc bằng bước **Kiểm** của giáo viên.'],
+['lesson', 'F1', 'Khung năng lực số của giáo viên theo Thông tư 18/2026'],
+['p', 'Từ ngày 12/5/2026, giáo viên và cán bộ quản lý cơ sở giáo dục mầm non, phổ thông có một khung năng lực số chung theo **Thông tư 18/2026/TT-BGDĐT**. Khung gồm **6 miền năng lực** với **20 năng lực thành phần**, chia **3 mức: cơ bản, thành thạo, nâng cao**. Điểm mới quan trọng: **AI lần đầu là một miền năng lực riêng**. Giáo viên cần biết ứng dụng AI trong dạy học, đồng thời bảo đảm minh bạch, công bằng và bảo vệ dữ liệu cá nhân.'],
+['p', 'Nói gọn: mọi bài trong cuốn sách này đều là cách thầy cô rèn miền năng lực AI đó. Đi hết sách, thầy cô đã có nền tảng ở mức cơ bản và bắt đầu tiến lên mức thành thạo.'],
+['p', 'Với học sinh, từ năm học 2026-2027 Bộ GDĐT triển khai nội dung giáo dục AI theo **Quyết định 2422/QĐ-BGDĐT** (18/8/2026) và **Công văn 5588/BGDĐT-GDPT** (19/8/2026), mỗi lớp 12 tiết/năm học. Thầy cô dùng AI thành thạo thì cũng dễ hướng dẫn học sinh dùng AI an toàn, có trách nhiệm.'],
+['p', 'Để tham khảo thêm, UNESCO (2024) cũng có khung năng lực AI cho giáo viên gồm 5 lĩnh vực, mỗi lĩnh vực 3 cấp độ: Tiếp thu, Đào sâu, Sáng tạo.'],
+['img', 'h14-unesco', 'Hình tham khảo. Năm lĩnh vực năng lực AI của giáo viên theo UNESCO (2024).'],
+['p', 'Luật Trí tuệ nhân tạo số 134/2025/QH15 khẳng định AI là công cụ hỗ trợ, con người quyết định cuối cùng. Vì vậy mọi bài trong sách đều kết thúc bằng bước **Kiểm** của giáo viên.'],
 ['bullets', [
   '**Tư duy lấy con người làm trung tâm:** AI hỗ trợ, con người quyết định. Thầy cô chịu trách nhiệm cuối cùng với mọi nội dung đưa vào lớp.',
   '**Đạo đức AI:** tôn trọng quyền riêng tư, bản quyền, công bằng giữa các học sinh.',
@@ -535,7 +538,7 @@ module.exports = [
   '**AI cho phát triển nghề nghiệp:** dùng AI để tự học, nghiên cứu, chia sẻ với đồng nghiệp.',
 ]],
 ['lesson', 'F2', 'Ba màu đèn trước khi dán thông tin vào AI'],
-['img', 'h15-an-toan', 'Hình F2. Phân loại thông tin theo 3 màu đèn.'],
+['img', 'h15-an-toan', 'Phân loại thông tin theo 3 màu đèn.'],
 ['lesson', 'F3', 'Danh sách tự kiểm trước khi dùng sản phẩm của AI'],
 ['checklist', [
   'Kiến thức đúng với sách giáo khoa và chương trình đang dạy.',
@@ -545,7 +548,7 @@ module.exports = [
   'Không có thông tin cá nhân của học sinh hay phụ huynh.',
   'Đề kiểm tra: mỗi câu trắc nghiệm có đúng 1 đáp án đúng, không trùng câu.',
   'Chatbot cho học sinh: đã tự thử hỏi 5 câu, kể cả câu "xin đáp án" và câu ngoài lề.',
-  'Ảnh, giọng đọc, video do AI tạo ra đã có ghi chú nhận biết, ví dụ "Hình ảnh tạo bởi AI" (Luật Trí tuệ nhân tạo 2025).',
+  'Ảnh, giọng đọc, video do AI tạo ra đã có ghi chú nhận biết, ví dụ "Hình ảnh tạo bởi AI" (Luật Trí tuệ nhân tạo số 134/2025/QH15).',
   'Tài liệu dùng làm nguồn (SGK, bài báo) đã ghi tên tác giả và nguồn gốc (Luật Sở hữu trí tuệ, Điều 25).',
   'Nếu dùng AI hỗ trợ soạn, thầy cô sẵn sàng giải thích với đồng nghiệp, phụ huynh cách mình đã dùng.',
 ]],
@@ -553,7 +556,7 @@ module.exports = [
 // ===================== PHỤ LỤC =====================
 ['part', 'PHỤ LỤC', 'Tra nhanh và mẫu điền sẵn', 'Mở phần này khi cần làm ngay, không cần đọc lại cả sách.'],
 ['lesson', 'P1', 'Bắt đầu theo cấp học'],
-['img', 'h16-cap-hoc', 'Hình P1. Ba việc làm được ngay cho mỗi cấp học.'],
+['img', 'h16-cap-hoc', 'Ba việc làm được ngay cho mỗi cấp học.'],
 ['table', ['Tôi muốn...', 'Mở bài', 'Công cụ'], [
   ['Có ý tưởng bài dạy thật nhanh', '{{B1:s}}, {{B4:s}}', 'ChatGPT, Gemini'],
   ['Soạn bài giảng có slide, Quiz', '{{B6:s}}', 'ChatGPT, Gemini'],

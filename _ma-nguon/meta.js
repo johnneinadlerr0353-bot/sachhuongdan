@@ -48,7 +48,7 @@ const LESSON = {
   E4: { goal: 'tạo trợ giảng ảo trên Gemini để học sinh hỏi bài', time: '20 phút', say: 'Đây là sản phẩm mà nhiều thầy cô tự hào nhất sau khóa học. Thầy cô làm đủ 5 bước, rồi tự đóng vai học sinh để thử.' },
   E5: { goal: 'tạo chatbot trên Poe chỉ trả lời trong phạm vi môn học', time: '15 phút', say: 'Cách làm gần giống {{E4}}. Điểm khác là câu "hàng rào" để chatbot không trả lời chuyện ngoài lề.' },
   E6: { goal: 'dùng các công cụ làm sẵn cho giáo viên trên Magic School', time: '15 phút', say: 'Magic School có sẵn nhiều ô để điền. Thầy cô chỉ cần nhớ một câu: luôn thêm "Trình bày bằng tiếng Việt".' },
-  F1: { goal: 'biết khung năng lực AI của giáo viên và vị trí của mình trong đó', time: '5 phút', say: 'Thầy cô không cần thuộc khung này. Chỉ cần biết mình đang ở đâu và bước tiếp theo là gì.' },
+  F1: { goal: 'biết Khung năng lực số của giáo viên theo Thông tư 18/2026 và vị trí của mình trong đó', time: '5 phút', say: 'Thầy cô không cần thuộc khung này. Chỉ cần biết mình đang ở đâu và bước tiếp theo là gì.' },
   F2: { goal: 'biết thông tin nào được dán vào AI, thông tin nào tuyệt đối không', time: '5 phút', say: 'Nếu chỉ nhớ một bài trong phần này, tôi mong thầy cô nhớ bài này.' },
   F3: { goal: 'tự kiểm tra sản phẩm của AI trước khi đưa cho học sinh', time: '5 phút', say: 'Thầy cô in trang này ra, mỗi lần dùng sản phẩm AI thì đánh dấu từng ô.' },
   P1: { goal: 'tìm nhanh bài cần đọc theo việc cần làm', time: '', say: '' },

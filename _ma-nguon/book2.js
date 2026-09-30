@@ -168,7 +168,7 @@ function letter() {
     P('Thưa thầy cô,'),
     P('Nếu thầy cô đang cầm cuốn sách này, có lẽ thầy cô đã nghe nhiều về AI nhưng chưa biết bắt đầu từ đâu. Có thể thầy cô từng thử một lần, AI trả lời lan man, rồi thầy cô gác lại. Điều đó rất bình thường. Không ai sinh ra đã biết dùng AI.'),
     P('Tôi viết cuốn sách này như đang ngồi cạnh thầy cô trước màn hình. Mỗi bài tôi chỉ **bấm vào đâu**, **gõ câu gì** và **vì sao lại gõ như vậy**. Mỗi câu lệnh trong sách thầy cô có thể sao chép nguyên văn và chạy được ngay. Bên dưới luôn có phiên bản đã đổi sẵn cho **Mầm non, Tiểu học, THCS**.'),
-    P('Tôi chỉ xin thầy cô nhớ một điều: **AI là trợ lý, thầy cô là người quyết định.** AI viết nhanh nhưng có lúc viết sai. Người đọc lại, sửa lại và chịu trách nhiệm trước học sinh vẫn là thầy cô. Điều này cũng đúng với tinh thần của Luật Trí tuệ nhân tạo 2025: AI là công cụ hỗ trợ, con người quyết định cuối cùng.'),
+    P('Tôi chỉ xin thầy cô nhớ một điều: **AI là trợ lý, thầy cô là người quyết định.** AI viết nhanh nhưng có lúc viết sai. Người đọc lại, sửa lại và chịu trách nhiệm trước học sinh vẫn là thầy cô. Điều này đúng với Luật Trí tuệ nhân tạo số 134/2025/QH15: AI là công cụ hỗ trợ, con người quyết định cuối cùng. Cuốn sách cũng bám theo **Thông tư 18/2026/TT-BGDĐT** về Khung năng lực số của giáo viên, trong đó AI lần đầu là một miền năng lực riêng.'),
     P('Thầy cô cứ đi chậm. Mỗi ngày một vài bài. Sau 7 ngày, tôi tin thầy cô sẽ tự soạn được bài, ra được đề, làm được học liệu với AI và có thêm thời gian cho học sinh của mình.'),
     P('Chúc thầy cô vững tay.', { italics: true }),
     P('[Tên tác giả]', { bold: true }),
@@ -215,7 +215,7 @@ function toc() {
 
 function basisPage() {
   const out = [kicker('CĂN CỨ BIÊN SOẠN'), h1('Sách dựa trên văn bản nào'),
-    P('Các bài trong sách được đối chiếu với văn bản pháp luật và hướng dẫn chuyên môn dưới đây. Tôi ưu tiên văn bản ban hành 2025-2026 và định hướng đến năm 2030. Đầu mỗi bài có dòng **Căn cứ** ghi văn bản liên quan tới bài đó.'),
+    P('Các bài trong sách được đối chiếu với văn bản pháp luật và hướng dẫn chuyên môn dưới đây. Tôi xếp văn bản theo thứ tự thầy cô cần quan tâm: trước hết là văn bản mới nhất của Bộ GDĐT năm 2026 dành cho giáo viên và năm học 2026-2027, sau đó là văn bản chuyên môn đang áp dụng, văn bản của Sở GDĐT, cuối cùng là luật và định hướng quốc gia có liên quan. Đầu mỗi bài có dòng **Căn cứ** ghi văn bản liên quan tới bài đó.'),
     P('Sách là tài liệu tham khảo thực hành của tác giả, **không phải văn bản của cơ quan nhà nước** và không thay thế văn bản gốc. Thầy cô luôn làm theo văn bản hiện hành và hướng dẫn của nhà trường.', { size: 21 })];
   for (const [g, gname] of GROUPS) {
     out.push(h3(gname));

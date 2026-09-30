@@ -56,6 +56,7 @@ module.exports = [
 ]],
 ['h3', 'Việc 2. Không dán thông tin cá nhân của học sinh'],
 ['p', 'Không dán họ tên kèm điểm số, số điện thoại, địa chỉ, ảnh, thông tin sức khỏe của học sinh vào AI. Đây là yêu cầu của **Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15** (hiệu lực từ 01/1/2026). Chi tiết ở {{F2}} trong sách.'],
+['p', 'Với **mầm non**, Công văn 5385/BGDĐT-GDMN (12/8/2026) nhấn mạnh công nghệ số chỉ dùng để hỗ trợ giáo viên thiết kế hoạt động, phối hợp với gia đình và phải bảo đảm an toàn, riêng tư của trẻ. Thông tư 18/2026/TT-BGDĐT cũng yêu cầu giáo viên dùng AI bảo đảm minh bạch, công bằng, bảo vệ dữ liệu cá nhân.'],
 ['h3', 'Việc 3. Ghi chú khi dùng ảnh, giọng đọc do AI tạo'],
 ['p', '**Luật Trí tuệ nhân tạo số 134/2025/QH15** (hiệu lực từ 01/3/2026) yêu cầu nội dung do AI tạo ra có dấu hiệu nhận biết. Khi dùng ảnh, bài hát, giọng đọc do AI tạo, thầy cô ghi chú nhỏ: "Có sử dụng AI hỗ trợ".'],
 ['p', 'Với học sinh THCS dùng chatbot, thầy cô bám theo **Khung năng lực số cho người học** (Thông tư 02/2025/TT-BGDĐT): dùng an toàn, có trách nhiệm, trung thực. Nhiều công cụ AI quy định độ tuổi tối thiểu, thầy cô kiểm tra điều khoản trước khi cho học sinh dùng trực tiếp.'],
