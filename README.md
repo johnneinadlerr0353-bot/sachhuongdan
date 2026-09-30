@@ -8,7 +8,7 @@ Sổ tay cầm tay chỉ việc dùng AI cho giáo viên Mầm non, Tiểu học
 |---|---|
 | `BO-TAI-LIEU-GUI-KHACH/` | 5 tệp khách nhận được, đánh số 00 đến 04 theo thứ tự mở |
 | `Day-cung-AI-tron-bo.zip` | Gói nén của thư mục trên, dùng để tải lên thebuilder.work |
-| `ANH-DANG-BAN/` | 6 ảnh đăng bán (1080×1350) theo trình tự người mua tự hỏi, và nội dung bài đăng |
+| `ANH-DANG-BAN/` | 6 ảnh đăng bán (1080×1350) theo trình tự người mua tự hỏi kèm nội dung bài đăng |
 | `_ma-nguon/` | Tệp nguồn để sửa nội dung rồi dựng lại |
 
 ## Thứ tự tệp gửi khách
