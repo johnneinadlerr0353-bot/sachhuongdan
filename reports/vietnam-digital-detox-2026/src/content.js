@@ -6,6 +6,7 @@ const FN = {
   dr_vn: "DataReportal (Kepios, We Are Social and Meltwater), Digital 2026: Vietnam. 79.0 million social media user identities (77.6% of the population); 85.6 million internet users (84.2%).",
   dr_global: "DataReportal, Digital 2026 Global Overview Report and April 2026 update: 5.79 billion social media user identities, 69.9% of the world's population.",
   dr_th: "DataReportal, Digital 2026: Thailand (October 2025 data): 79.1% social media penetration; 2 hours 58 minutes a day on social media. Global average daily time of 2 hours 40 minutes.",
+  dr_mobile: "DataReportal, Digital 2026: Vietnam, as reported by Elite Asia (2026): 137 million cellular mobile connections, equal to 134% of the population.",
   platforms: "DataReportal, Digital 2026: Vietnam; platform advertising audiences and Zalo monthly active users as reported by Elite Asia (2026).",
   online_time: "Tuoi Tre News (15 October 2025), reporting the Ministry of Public Security's 'Cham Ma Chac' online safety campaign: Vietnamese internet users spend 6 hours 38 minutes online a day.",
   wearesocial_2024: "We Are Social and Meltwater, Digital 2024: Vietnam, as reported by Bao Ha Tinh (2026): more than two hours a day on social media.",
@@ -109,7 +110,7 @@ exhibit({
 box({
   label: "Deep dive 3", title: "Why Vietnam is so connected",
   blocks: [
-    { t: "p", text: "Several forces explain why Vietnam sits above the world average. The first is that Vietnam moved straight to the smartphone: for many households the phone is the first and only computer, so work, study, shopping and payments all run through one device. The second is the role of messaging. Zalo, a Vietnamese platform with 78.3 million monthly users, often carries work groups, school announcements and family conversations, so stepping away from it means stepping away from daily obligations. The third is that payments now live on the phone as well, through QR codes that have spread from supermarkets to street stalls." },
+    { t: "p", text: "Several forces explain why Vietnam sits above the world average. The first is that Vietnam moved straight to the smartphone: for many households the phone is the first and only computer, so work, study, shopping and payments all run through one device. Vietnam counts 137 million mobile connections, equal to 134% of its population, which means many people carry more than one SIM or device.[^dr_mobile] The second is the role of messaging. Zalo, a Vietnamese platform with 78.3 million monthly users, often carries work groups, school announcements and family conversations, so stepping away from it means stepping away from daily obligations. The third is that payments now live on the phone as well, through QR codes that have spread from supermarkets to street stalls." },
     { t: "p", text: "The consequence is that digital detox in Vietnam cannot mean switching off completely. Few people can afford to leave Zalo or their banking app. The practical form of detox is therefore selective: fewer platforms, fewer notifications and shorter, more purposeful sessions. That is precisely the behaviour that will reshape how Vietnamese customers judge digital services." },
   ],
 });
