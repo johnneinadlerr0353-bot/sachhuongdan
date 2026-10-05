@@ -73,10 +73,18 @@ const exhibitHead = (label, title) => [
 const note = (label, text, last = false) => new Paragraph({ spacing: { after: last ? 220 : 20 }, children: [
   new TextRun({ text: label + ": ", bold: true, size: 14, color: C.grey }), ...runs(text, { size: 14, color: C.grey })] });
 
+const chart = (name, widthPx) => {
+  const png = path.join(ROOT, "charts", name + ".png"); const svg = path.join(ROOT, "charts", name + ".svg");
+  const [w, h] = pngSize(png);
+  return new ImageRun({ type: "svg", data: fs.readFileSync(svg), fallback: { type: "png", data: fs.readFileSync(png) },
+    transformation: { width: widthPx, height: Math.round(widthPx * h / w) } });
+};
 function exhibit(b) {
+  const head = exhibitHead(`Exhibit ${b.n}`, b.title);
+  if (b.pageBreak) head[0] = new Paragraph({ pageBreakBefore: true, keepNext: true, spacing: { before: 0, after: 40 }, children: [new TextRun({ text: `EXHIBIT ${b.n}`, bold: true, size: 15, color: C.blue, font: SANS, characterSpacing: 30 })] });
   return [
-    ...exhibitHead(`Exhibit ${b.n}`, b.title),
-    new Paragraph({ keepNext: true, spacing: { after: 80 }, children: [img(`charts/${b.img}`, PX)] }),
+    ...head,
+    new Paragraph({ keepNext: true, spacing: { after: 80 }, children: [chart(b.img, PX)] }),
     ...(b.notes ? [note("Notes", b.notes)] : []),
     note("Source", b.source, true),
   ];
@@ -132,9 +140,10 @@ function table(b) {
 
 function glance(b) {
   return [box([
-    new Paragraph({ spacing: { after: 100 }, children: [new TextRun({ text: b.title.toUpperCase(), bold: true, size: 16, color: C.blue, characterSpacing: 30 })] }),
-    ...b.items.map((t) => new Paragraph({ numbering: { reference: "dash", level: 0 }, spacing: { after: 80, line: 270 }, children: runs(t, { size: 18, color: C.navy }) })),
-  ]), spacer(200)];
+    new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: b.title.toUpperCase(), bold: true, size: 15, color: C.blue, characterSpacing: 40 })] }),
+    ...(b.lead ? [new Paragraph({ spacing: { after: 140, line: 290 }, children: [new TextRun({ text: b.lead, font: SERIF, size: 25, color: C.navy })] })] : []),
+    ...b.items.map((t) => new Paragraph({ numbering: { reference: "dash", level: 0 }, spacing: { after: 70, line: 264 }, children: runs(t, { size: 18, color: C.navy }) })),
+  ], { fill: C.ice, left: C.blue, leftSize: 24, margins: 240 }), spacer(220)];
 }
 
 function callout(b) {
@@ -172,6 +181,14 @@ function sectionOpener(b, first) {
   return out;
 }
 
+function author() {
+  return [new Paragraph({ spacing: { before: 360, after: 40 }, border: { top: { style: BorderStyle.SINGLE, size: 4, color: C.silver, space: 10 } },
+    children: [new TextRun({ text: "PREPARED BY", bold: true, size: 14, color: C.blue, characterSpacing: 30 })] }),
+    new Paragraph({ spacing: { after: 20 }, children: [new TextRun({ text: "Le Dinh Thang (Alex), MA, Adv PA", font: SERIF, size: 24, color: C.navy, bold: true })] }),
+    new Paragraph({ spacing: { after: 20 }, children: [new TextRun({ text: "Managing Partner, Partner and Advisory Services Leader, ABrighter", size: 16, color: C.grey })] }),
+    new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text: "thang.le@abrighterconsultancy.com  |  +84 90 338 5558", size: 16, color: C.blue })] })];
+}
+
 // ---------------------------------------------------------------- body
 const body = [];
 let execBuffer = null;
@@ -193,13 +210,12 @@ for (let k = 0; k < S.length; k++) {
     case "table": body.push(...table(b)); break;
     case "glance": body.push(...glance(b)); break;
     case "callout": body.push(...callout(b)); break;
-    case "kpis": body.push(...kpis(b.items)); break;
+    case "kpis": body.push(...kpis(b.items)); body.push(...author()); break;
   }
 }
 if (execBuffer) body.push(box(execBuffer, { fill: C.navy }));
 
 // prepared-by block after key numbers
-const execIdx = body.findIndex((x) => x instanceof Table) ; // not used further
 
 // ---------------------------------------------------------------- references and appendices
 const refs = [
@@ -274,18 +290,51 @@ const appendix = [
   simpleTable(["Item", "Calculation or note"], METHOD, [2300, 7338]),
   spacer(40),
   new Paragraph({ spacing: { after: 80, line: 260 }, children: runs("Exhibit 3 tiers follow Krungsri Research (2026): 'Very High' for agri-food; 'High' for apparel, textiles, motor vehicles, electronics, machinery and wood products; 'Moderate' for chemicals, metals, rubber, plastics and leather; 'Low' for minerals, oil and gas. Mapping Vietnam's export items to these groups is our own judgement. Footwear is mapped to tanning and leather.", { size: 15, color: C.grey }) }),
-  new Paragraph({ spacing: { after: 240, line: 260 }, children: runs("All paragraphs that rely on our own calculations or interpretation are labelled [Inference]. Statements we could not check against a primary source are labelled [Unverified].", { size: 15, color: C.grey }) }),
+  new Paragraph({ spacing: { after: 240, line: 260 }, children: runs("Figures described in the text as our estimate, our calculation or our scenario are ABrighter Research derivations from the sources shown. Their arithmetic is set out above. Peer comparisons use the 2024 regional dataset compiled by Krungsri Research (2026) from Trade Map and CEIC.", { size: 15, color: C.grey }) }),
   ...exhibitHead("Appendix C", "Glossary"),
   simpleTable(["Term", "Meaning"], GLOSS, [1800, 7838]),
   spacer(40),
 ];
 
+const svcW = [CW / 2, CW / 2];
+const svc = (title, items) => new TableCell({ width: { size: CW / 2, type: WidthType.DXA }, margins: { top: 160, bottom: 140, left: 200, right: 200 },
+  borders: { top: { style: BorderStyle.SINGLE, size: 12, color: C.blue }, bottom: none, left: none, right: { style: BorderStyle.SINGLE, size: 24, color: C.white } },
+  shading: { fill: C.ice, type: ShadingType.CLEAR, color: "auto" },
+  children: [new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: title, bold: true, size: 19, color: C.navy })] }),
+    ...items.map((t) => new Paragraph({ numbering: { reference: "dash", level: 0 }, spacing: { after: 40, line: 252 }, children: [new TextRun({ text: t, size: 16 })] }))] });
 const about = [
-  new Paragraph({ pageBreakBefore: true, spacing: { before: 600, after: 200 }, children: [img("assets/abrighter_logo.png", 220)] }),
-  new Paragraph({ spacing: { after: 120 }, children: [new TextRun({ text: "About ABrighter Research", font: SERIF, size: 36, color: C.navy })] }),
-  P("ABrighter Research publishes Research Intelligence reports on trade, industry and policy for clients in Vietnam and the region. This report applies the framework of Krungsri Research (2026) to Vietnam, updates the data to 30 June 2026 and extends the analysis of mechanisms and policy options.", { run: { size: 18 } }),
-  new Paragraph({ spacing: { before: 400, after: 100 }, children: [new TextRun({ text: "DISCLAIMER", bold: true, size: 15, color: C.blue, characterSpacing: 30 })] }),
-  P("This document is provided for information only. It is based on public sources believed to be reliable at the time of writing. ABrighter Research does not warrant their accuracy or completeness. Illustrative calculations rest on stated assumptions and are not forecasts. Nothing in this report is investment, legal or tax advice. Readers should verify figures against primary sources before relying on them.", { run: { size: 16, color: C.grey } }),
+  new Paragraph({ pageBreakBefore: true, spacing: { after: 0 }, children: [new TextRun({ text: "ABOUT ABRIGHTER", bold: true, size: 15, color: C.blue, characterSpacing: 40 })] }),
+  new Paragraph({ spacing: { after: 200 }, children: [new TextRun({ text: "A brighter future for all customers", font: SERIF, size: 44, color: C.navy })] }),
+  box([
+    new Paragraph({ spacing: { after: 60 }, children: [new TextRun({ text: "OUR PURPOSE", bold: true, size: 15, color: C.cyan, characterSpacing: 40 })] }),
+    new Paragraph({ spacing: { after: 60, line: 300 }, children: [new TextRun({ text: "Building a brighter future for all customers and doing the right things. Our mission for advisory to clients rests on three words: care, encourage and commitment.", font: SERIF, size: 24, color: C.white })] }),
+  ], { fill: C.navy, left: C.cyan, leftSize: 36, margins: 280 }),
+  spacer(200),
+  P("ABrighter is an advisory team that helps clients build better organisations. We work with public bodies, consumer businesses and companies going through financial and organisational change. Our team is bound by ethics, integrity and honesty. We treat clients, candidates and employees with the respect they deserve. Our strategy is simple: to become a valued partner that helps each client grow more modern, resilient and sustainable.", { run: { size: 19 } }),
+  new Paragraph({ spacing: { before: 120, after: 100 }, children: [new TextRun({ text: "OUR VALUES", bold: true, size: 15, color: C.blue, characterSpacing: 40 })] }),
+  new Table({ width: { size: CW, type: WidthType.DXA }, columnWidths: [Math.floor(CW / 3), Math.floor(CW / 3), CW - 2 * Math.floor(CW / 3)], borders: noBorders,
+    rows: [new TableRow({ children: [["Care", "We care about our customers and each other. We serve with humility and transparency."],
+      ["Courage", "We have the courage to step in, speak up and lead by example."],
+      ["Commitment", "We are unwavering in our commitment. We do what is right and work together to get things done."]].map(([t, d], i) =>
+      new TableCell({ width: { size: i < 2 ? Math.floor(CW / 3) : CW - 2 * Math.floor(CW / 3), type: WidthType.DXA }, margins: { top: 140, bottom: 120, left: 180, right: 160 },
+        borders: { top: { style: BorderStyle.SINGLE, size: 12, color: C.navy }, bottom: none, left: none, right: { style: BorderStyle.SINGLE, size: 24, color: C.white } },
+        shading: { fill: C.mist, type: ShadingType.CLEAR, color: "auto" },
+        children: [new Paragraph({ spacing: { after: 60 }, children: [new TextRun({ text: t, font: SERIF, size: 26, color: C.blue })] }),
+          new Paragraph({ spacing: { after: 0, line: 252 }, children: [new TextRun({ text: d, size: 16 })] })] })) })] }),
+  new Paragraph({ spacing: { before: 280, after: 100 }, children: [new TextRun({ text: "WHAT WE DO", bold: true, size: 15, color: C.blue, characterSpacing: 40 })] }),
+  new Table({ width: { size: CW, type: WidthType.DXA }, columnWidths: svcW, borders: noBorders, rows: [
+    new TableRow({ children: [svc("Strategy and finance control", ["Corporate strategy and management vision", "Business portfolio and digital transformation strategy", "Accounting, financial operations and management control"]),
+      svc("Human capital management", ["Talent management", "Personal and organisation development", "Labour and legal HR"])] }),
+    new TableRow({ children: [svc("Transactions and deals", ["Value drivers, operating cash flows and net debt", "Working capital and quality of earnings review", "Pricing, negotiation support and purchase price allocation"]),
+      svc("Marketing and public relations", ["Corporate branding and repositioning", "PR strategy and new product campaigns", "Public affairs and advocacy strategy"])] }),
+  ] }),
+  new Paragraph({ spacing: { before: 280, after: 100 }, children: [new TextRun({ text: "HOW WE WORK WITH CLIENTS", bold: true, size: 15, color: C.blue, characterSpacing: 40 })] }),
+  ...[["Design and implement", "We take on the client's needs and build an action plan for a better organisation."],
+    ["Define and embed", "We embed and sustain the outcomes of the plan and bring best practice into delivery."],
+    ["Mature and evolve", "We keep moving with each client as a real partner, assessing and improving as conditions change."]].map(([t, d], i) =>
+    new Paragraph({ spacing: { after: 80, line: 264 }, children: [new TextRun({ text: `0${i + 1}  `, font: SERIF, size: 24, color: C.blue }), new TextRun({ text: t + ". ", bold: true, size: 18, color: C.navy }), new TextRun({ text: d, size: 18 })] })),
+  new Paragraph({ spacing: { before: 300, after: 80 }, children: [new TextRun({ text: "DISCLAIMER", bold: true, size: 14, color: C.grey, characterSpacing: 30 })] }),
+  P("This document is provided for information only. It is based on public sources believed to be reliable at the time of writing. ABrighter does not warrant their accuracy or completeness. Scenarios rest on stated assumptions and are not forecasts. Nothing in this report is investment, legal or tax advice. Readers should verify figures against primary sources before relying on them.", { run: { size: 14, color: C.grey } }),
 ];
 
 // ---------------------------------------------------------------- contents
@@ -321,7 +370,7 @@ const blankF = { default: new Footer({ children: [new Paragraph({ children: [] }
 const A4 = { width: 11906, height: 16838 };
 const fullPage = (file) => {
   const f = path.join(ROOT, file);
-  return new Paragraph({ spacing: { before: 0, after: 0 }, children: [new ImageRun({ type: "png", data: fs.readFileSync(f), transformation: { width: 794, height: 1123 },
+  return new Paragraph({ spacing: { before: 0, after: 0 }, children: [new ImageRun({ type: "jpg", data: fs.readFileSync(f), transformation: { width: 794, height: 1123 },
     floating: { horizontalPosition: { relative: HorizontalPositionRelativeFrom.PAGE, offset: 0 }, verticalPosition: { relative: VerticalPositionRelativeFrom.PAGE, offset: 0 }, behindDocument: true, allowOverlap: true } })] });
 };
 
@@ -333,11 +382,11 @@ const doc = new Document({
     style: { paragraph: { indent: { left: 340, hanging: 280 } }, run: { color: C.blue, size: 14 } } }] }] },
   footnotes,
   sections: [
-    { properties: { page: { size: A4, margin: { top: 720, bottom: 720, left: 720, right: 720, header: 0, footer: 0 } } }, headers: blank, footers: blankF, children: [fullPage("assets/cover.png")] },
+    { properties: { page: { size: A4, margin: { top: 720, bottom: 720, left: 720, right: 720, header: 0, footer: 0 } } }, headers: blank, footers: blankF, children: [fullPage("assets/cover.jpg")] },
     { properties: { page: { size: A4, margin: { top: 1300, bottom: 1134, left: 1134, right: 1134 } } }, headers: blank, footers: blankF, children: contents },
     { properties: { page: { size: A4, margin: { top: 1300, bottom: 1134, left: 1134, right: 1134, header: 560, footer: 520 } } },
       headers: { default: header }, footers: { default: footer }, children: [...body, ...refs, ...appendix, ...about] },
-    { properties: { page: { size: A4, margin: { top: 720, bottom: 720, left: 720, right: 720, header: 0, footer: 0 } } }, headers: blank, footers: blankF, children: [fullPage("assets/back.png")] },
+    { properties: { page: { size: A4, margin: { top: 720, bottom: 720, left: 720, right: 720, header: 0, footer: 0 } } }, headers: blank, footers: blankF, children: [fullPage("assets/back.jpg")] },
   ],
 });
 

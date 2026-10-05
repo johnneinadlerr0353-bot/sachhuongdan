@@ -144,7 +144,7 @@ def ex3_basket():
     b.hlines(y, 0, aves, color=SILVER, lw=1)
     b.scatter(aves, y, color=cols, s=36, zorder=3)
     for yi, v in zip(y, aves):
-        b.text(v + 1.8, yi, f"{v:.1f}%", va="center", fontsize=8)
+        b.text(v + 2.6, yi, f"{v:.1f}%", va="center", fontsize=8)
     b.set_xlim(0, 34)
     b.set_xticks([])
     clean(b, left=False, bottom=False)
@@ -443,12 +443,10 @@ def ex13_roadmap():
 
 if __name__ == "__main__":
     ex1_markets()
-    ex2_channels()
     ex3_basket()
     ex4_dependence()
     ex5_tiers()
     ex6_cbam()
     ex6a_cbam_exposure()
     ex8_eudr()
-    ex13_roadmap()
     print("done")

@@ -45,6 +45,7 @@ plt.rcParams.update({
     "legend.frameon": False,
     "legend.fontsize": 8.5,
     "savefig.dpi": 300,
+    "svg.fonttype": "path",
     "savefig.bbox": "tight",
     "savefig.pad_inches": 0.06,
     "figure.facecolor": "white",
@@ -60,5 +61,7 @@ def clean(ax, left=True, bottom=True):
 
 
 def save(fig, name):
-    fig.savefig(f"charts/{name}.png")
+    # Vector SVG (text converted to paths so it stays sharp in any viewer) plus a PNG fallback
+    fig.savefig(f"charts/{name}.svg", format="svg")
+    fig.savefig(f"charts/{name}.png", dpi=300)
     plt.close(fig)

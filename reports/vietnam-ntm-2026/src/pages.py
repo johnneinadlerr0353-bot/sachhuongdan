@@ -8,9 +8,14 @@ keys = {"exec": "EXECUTIVE SUMMARY", "intro": "Introduction", "overview": "Overv
 pages = {}
 for i in range(3, n + 1):
     t = subprocess.run(["pdftotext", "-f", str(i), "-l", str(i), pdf, "-"], capture_output=True, text=True).stdout
-    head = " ".join(t.strip().splitlines()[:7])
+    lines = [l.strip() for l in t.strip().splitlines()[:8]]
+    head = " ".join(lines)
     for k, v in keys.items():
-        if k not in pages and v in head:
+        if k in ("refs", "appendix", "intro"):
+            hit = v in lines
+        else:
+            hit = v in head
+        if k not in pages and hit:
             pages[k] = i
 print(pages)
 json.dump(pages, open(sys.argv[2], "w"))
