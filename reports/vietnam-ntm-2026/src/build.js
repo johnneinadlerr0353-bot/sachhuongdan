@@ -339,11 +339,11 @@ const about = [
 
 // ---------------------------------------------------------------- contents
 const TOC = [
-  ["Executive Summary", "exec"], ["Introduction", "intro"],
-  ["Overview of the European Union's Non-Tariff Measures Implementation", "overview"],
-  ["Analysis of the Impacts of Non-Tariff Measures on Vietnam's Economy", "analysis"],
-  ["Summary of Impact Levels and Policy Responses", "summary"],
-  ["ABrighter Research View", "view"], ["References", "refs"], ["Appendix", "appendix"],
+  ["Executive Summary", "exec"], ["When Rules Replace Tariffs", "intro"],
+  ["Europe's Rulebook", "overview"],
+  ["Measuring Vietnam's Exposure", "analysis"],
+  ["Scoring the Risk, Mapping the Response", "summary"],
+  ["The ABrighter Perspective", "view"], ["References", "refs"], ["Appendix", "appendix"],
 ];
 const contents = [
   new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text: "CONTENTS", bold: true, size: 15, color: C.blue, characterSpacing: 40 })] }),
@@ -362,7 +362,7 @@ const header = new Header({ children: [new Paragraph({ tabStops: [{ type: TabSto
     new TextRun({ text: "\t" }),
     img("assets/abrighter_logo.png", 78)] })] });
 const footer = new Footer({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: CW }], spacing: { before: 0 }, children: [
-  new TextRun({ text: "Non-Tariff Measures: Impacts and Challenges for Vietnam", size: 14, color: C.grey }),
+  new TextRun({ text: "Beyond Tariffs: How Europe's Rules Are Reshaping Vietnam's Exports", size: 14, color: C.grey }),
   new TextRun({ children: ["\t", PageNumber.CURRENT], bold: true, size: 18, color: C.blue })] })] });
 const blank = { default: new Header({ children: [new Paragraph({ children: [] })] }) };
 const blankF = { default: new Footer({ children: [new Paragraph({ children: [] })] }) };
@@ -375,7 +375,7 @@ const fullPage = (file) => {
 };
 
 const doc = new Document({
-  creator: "ABrighter Research", title: "Non-Tariff Measures: Impacts and Challenges for Vietnam",
+  creator: "ABrighter Research", title: "Beyond Tariffs: How Europe's Rules Are Reshaping Vietnam's Exports",
   description: "Research Intelligence report, data to 30 June 2026",
   styles: { default: { document: { run: { font: SANS, size: 20, color: C.ink } } } },
   numbering: { config: [{ reference: "dash", levels: [{ level: 0, format: LevelFormat.BULLET, text: "■", alignment: AlignmentType.LEFT,

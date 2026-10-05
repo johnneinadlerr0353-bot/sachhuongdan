@@ -1,4 +1,4 @@
-# Non-Tariff Measures: Impacts and Challenges for Vietnam
+# Beyond Tariffs: How Europe's Rules Are Reshaping Vietnam's Exports
 
 ABrighter Research, Research Intelligence report (October 2026, data cut-off 30 June 2026).
 Analysis of EU non-tariff measures and their impact on Vietnam, with Vietnamese national statistics for 2025 and H1 2026.

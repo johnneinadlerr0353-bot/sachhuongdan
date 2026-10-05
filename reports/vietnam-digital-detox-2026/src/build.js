@@ -411,12 +411,12 @@ const about = [
 
 // ---------------------------------------------------------------- contents
 const TOC = [
-  ["Executive Summary", "exec"], ["Introduction", "intro"],
-  ["How Social Media Platforms Are Designed to Maximise Engagement", "design"],
-  ["What Is Digital Detox and Why Does It Matter?", "why"],
-  ["Advancing Digital Detox: From Social Awareness to Public Policy", "policy"],
-  ["The Implications of Digital Detox for Digital Banking in Vietnam", "banking"],
-  ["ABrighter Research View", "view"], ["References", "refs"],
+  ["Executive Summary", "exec"], ["A Nation Always Online", "intro"],
+  ["Engineered to Hold Attention", "design"],
+  ["The Case for Switching Off", "why"],
+  ["From Personal Choice to Public Rules", "policy"],
+  ["Banking in a Detox Era", "banking"],
+  ["The ABrighter Perspective", "view"], ["References", "refs"],
 ];
 const contents = [
   new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text: "CONTENTS", bold: true, size: 15, color: C.blue, characterSpacing: 40 })] }),
@@ -435,7 +435,7 @@ const header = new Header({ children: [new Paragraph({ tabStops: [{ type: TabSto
     new TextRun({ text: "\t" }),
     img("assets/abrighter_logo.png", 78)] })] });
 const footer = new Footer({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: CW }], spacing: { before: 0 }, children: [
-  new TextRun({ text: "Digital Detox: Restoring Balance in Vietnam's Digital Age", size: 14, color: C.grey }),
+  new TextRun({ text: "The Calm Dividend: Digital Detox and the Future of Banking in Vietnam", size: 14, color: C.grey }),
   new TextRun({ children: ["\t", PageNumber.CURRENT], bold: true, size: 18, color: C.blue })] })] });
 const blank = { default: new Header({ children: [new Paragraph({ children: [] })] }) };
 const blankF = { default: new Footer({ children: [new Paragraph({ children: [] })] }) };
@@ -448,7 +448,7 @@ const fullPage = (file) => {
 };
 
 const doc = new Document({
-  creator: "ABrighter Research", title: "Digital Detox: Restoring Balance in Vietnam's Digital Age",
+  creator: "ABrighter Research", title: "The Calm Dividend: Digital Detox and the Future of Banking in Vietnam",
   description: "Research Intelligence report, data to 30 September 2026",
   styles: { default: { document: { run: { font: SANS, size: 20, color: C.ink } } } },
   numbering: { config: [{ reference: "dash", levels: [{ level: 0, format: LevelFormat.BULLET, text: "■", alignment: AlignmentType.LEFT,

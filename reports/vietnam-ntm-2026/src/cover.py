@@ -62,10 +62,10 @@ d.text((W - 170 - d.textlength(cap, font=fcap), top_h + ph_h - 70), cap, font=fc
 # title block
 y = top_h + ph_h + 150
 spaced(d, (170, y), "OCTOBER 2026   |   DATA TO 30 JUNE 2026", font(L + "LiberationSans-Bold.ttf", 38), BLUE, 5)
-d.text((165, y + 85), "Non-Tariff Measures", font=font(F + "Gelasio_600SemiBold.ttf", 150), fill=NAVY)
-d.text((170, y + 290), "Impacts and Challenges for Vietnam", font=font(F + "Gelasio_400Regular.ttf", 92), fill=BLUE)
+d.text((165, y + 85), "Beyond Tariffs", font=font(F + "Gelasio_600SemiBold.ttf", 150), fill=NAVY)
+d.text((170, y + 290), "How Europe's rules are reshaping Vietnam's exports", font=font(F + "Gelasio_400Regular.ttf", 76), fill=BLUE)
 d.rectangle([170, y + 455, 330, y + 465], fill=CYAN)
-d.text((170, y + 505), "How EU rules on carbon, forests and food reshape Vietnam's exports",
+d.text((170, y + 505), "An analysis of EU non-tariff measures on carbon, forests and food",
        font=font(L + "LiberationSans-Regular.ttf", 46), fill=(60, 70, 80))
 d.text((170, y + 565), "and what it takes to turn compliance into advantage",
        font=font(L + "LiberationSans-Regular.ttf", 46), fill=(60, 70, 80))

@@ -58,12 +58,12 @@ d.text((W - 170 - d.textlength(cap, font=fcap), top_h + ph_h - 70), cap, font=fc
 # title block
 y = top_h + ph_h + 150
 spaced(d, (170, y), "OCTOBER 2026   |   DATA TO 30 SEPTEMBER 2026", font(L + "LiberationSans-Bold.ttf", 38), BLUE, 5)
-d.text((165, y + 85), "Digital Detox", font=font(F + "Gelasio_600SemiBold.ttf", 150), fill=NAVY)
-d.text((170, y + 290), "Restoring Balance in Vietnam's Digital Age", font=font(F + "Gelasio_400Regular.ttf", 92), fill=BLUE)
+d.text((165, y + 85), "The Calm Dividend", font=font(F + "Gelasio_600SemiBold.ttf", 150), fill=NAVY)
+d.text((170, y + 290), "Digital detox and the future of banking in Vietnam", font=font(F + "Gelasio_400Regular.ttf", 76), fill=BLUE)
 d.rectangle([170, y + 455, 330, y + 465], fill=CYAN)
 d.text((170, y + 505), "Why Vietnamese consumers are stepping back from their screens",
        font=font(L + "LiberationSans-Regular.ttf", 46), fill=(60, 70, 80))
-d.text((170, y + 565), "and what it means for digital banking",
+d.text((170, y + 565), "and why banks should welcome it",
        font=font(L + "LiberationSans-Regular.ttf", 46), fill=(60, 70, 80))
 d.line([(170, H - 190), (W - 170, H - 190)], fill=(197, 205, 213), width=3)
 d.text((170, H - 150), "ABrighter Research", font=font(L + "LiberationSans-Bold.ttf", 40), fill=NAVY)

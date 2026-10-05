@@ -2,16 +2,16 @@
 import subprocess, json, sys
 pdf = sys.argv[1]
 n = int([l for l in subprocess.run(["pdfinfo", pdf], capture_output=True, text=True).stdout.splitlines() if l.startswith("Pages")][0].split()[-1])
-keys = {"exec": "EXECUTIVE SUMMARY", "intro": "Introduction", "overview": "Overview of the European Union",
-        "analysis": "Analysis of the Impacts of Non-Tariff", "summary": "Summary of Impact Levels and Policy",
-        "view": "ABrighter Research View", "refs": "References", "appendix": "Appendix"}
+keys = {"exec": "EXECUTIVE SUMMARY", "intro": "When Rules Replace Tariffs", "overview": "Europe's Rulebook",
+        "analysis": "Measuring Vietnam's Exposure", "summary": "Scoring the Risk, Mapping the Response",
+        "view": "The ABrighter Perspective", "refs": "References", "appendix": "Appendix"}
 pages = {}
 for i in range(3, n + 1):
     t = subprocess.run(["pdftotext", "-f", str(i), "-l", str(i), pdf, "-"], capture_output=True, text=True).stdout
     lines = [l.strip() for l in t.strip().splitlines()[:8]]
     head = " ".join(lines)
     for k, v in keys.items():
-        if k in ("refs", "appendix", "intro"):
+        if k in ("refs", "appendix"):
             hit = v in lines
         else:
             hit = v in head

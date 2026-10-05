@@ -95,7 +95,7 @@ exhibit({
 });
 
 // ============================================================ INTRODUCTION
-section({ id: "intro", title: "Introduction", eyebrow: "01" });
+section({ id: "intro", title: "When Rules Replace Tariffs", eyebrow: "01" });
 
 keymsg("As tariff walls came down a different set of gates went up. For Vietnam the EU now operates the most demanding of them.", [
   "Tariffs fell by half between 2002 and 2021 while compliance costs from NTMs overtook tariff costs.",
@@ -111,11 +111,11 @@ p("Tariffs have also returned. Since Donald Trump began his second presidential 
 
 p("Major economies, including the United States, China, Japan and the EU, use NTMs both to protect domestic industry and to raise standards and pursue sustainability goals. The EU plays the most prominent role. It enforces its NTMs under strict requirements and clear timelines with the aim of protecting its market through harmonised quality standards. Because the EU is one of Vietnam's three largest export markets, these measures bear directly on Vietnam's exports and on the wider economy.");
 
-p("This report therefore examines the EU's NTMs and their impact on Vietnam. It compares Vietnam with Thailand, Indonesia, the Philippines and Malaysia on a common 2024 dataset.[^krungsri] It then updates the picture for Vietnam to 30 June 2026 (the data cut-off for this report) and explains the mechanisms behind each result. The analysis has three parts: (1) an overview of how the EU applies NTMs, (2) an analysis of their impact on Vietnam and (3) a summary of impact levels and policy responses. It closes with the ABrighter Research view.");
+p("This report therefore examines the EU's NTMs and their impact on Vietnam. It compares Vietnam with Thailand, Indonesia, the Philippines and Malaysia on a common 2024 dataset.[^krungsri] It then updates the picture for Vietnam to 30 June 2026 (the data cut-off for this report) and explains the mechanisms behind each result. The analysis has three parts: (1) an overview of how the EU applies NTMs, (2) an analysis of their impact on Vietnam and (3) a summary of impact levels and policy responses. It closes with the ABrighter perspective.");
 
 
 // ============================================================ OVERVIEW
-section({ id: "overview", title: "Overview of the European Union's Non-Tariff Measures Implementation", eyebrow: "02" });
+section({ id: "overview", title: "Europe's Rulebook", eyebrow: "02" });
 
 keymsg("The EU applies NTMs to almost everything it imports and keeps raising the bar product group by product group.", [
   "NTMs cover 99% of EU import lines and 98% of import value, more than in China or the United States.",
@@ -159,7 +159,7 @@ p("**CBAM** puts a carbon price on imports in six carbon-intensive groups so tha
 p("**SPS measures** set maximum residue limits and ban hazardous chemicals in food and farm products. They raise costs for importers and for every operator along the chain, who must adapt cultivation, testing and certification. Vietnam knows this cost well. The EU checks 50% of consignments of Vietnamese chilli and okra, 30% of dragon fruit and 20% of durian at its border.[^sps_checks] Compliance has improved: EU non-compliance alerts involving Vietnam fell from 64 in 2024 to 17 in 2025.[^sps_alerts] On 29 January 2026 the EU also announced a shift towards hazard-based residue limits, which will tighten the standard further.");
 
 // ============================================================ ANALYSIS
-section({ id: "analysis", title: "Analysis of the Impacts of Non-Tariff Measures on Vietnam's Economy", eyebrow: "03" });
+section({ id: "analysis", title: "Measuring Vietnam's Exposure", eyebrow: "03" });
 
 keymsg("Vietnam is the ASEAN economy most exposed to EU NTMs on every broad measure and the exposure is growing with its exports.", [
   "Its largest exports sit in product groups where NTMs raise prices most.",
@@ -296,7 +296,7 @@ table({
 });
 
 // ============================================================ SUMMARY
-section({ id: "summary", title: "Summary of Impact Levels and Policy Responses", eyebrow: "04" });
+section({ id: "summary", title: "Scoring the Risk, Mapping the Response", eyebrow: "04" });
 
 keymsg("Vietnam is the only large ASEAN economy rated 'High'. It has written most of the required instruments into law; delivery is now the constraint.", [
   "The rating combines overall exposure, product-level exposure and exposure to CBAM and the EUDR.",
@@ -372,7 +372,7 @@ p("On paper Vietnam has moved quickly: most of the instruments that EU buyers wi
 p("The ledger is therefore clear. On the credit side Vietnam has a low-risk EUDR status, a falling rate of food-safety alerts, a growing renewable power base and a legal basis for traceability. On the debit side it has a steel sector with high emission intensity, a smallholder supply base without plot data and verification systems that the EU does not yet recognise. The credit side was mostly built by law and decree. The debit side can only be cleared by investment and by data collected farm by farm and plant by plant.");
 
 // ============================================================ VIEW
-section({ id: "view", title: "ABrighter Research View", eyebrow: "05" });
+section({ id: "view", title: "The ABrighter Perspective", eyebrow: "05" });
 
 callout("The enforcement of NTMs by Vietnam's main trading partners, particularly the EU and the United States, will continue to intensify. These partners increasingly put environmental, sustainability and safety standards at the centre of trade policy. The impact runs through the whole supply chain, from sourcing raw materials to production processes and traceability. It forces firms to adapt at several levels at once. This will raise Vietnam's export costs and may become a structural challenge to its long-term competitiveness unless the response is faster than the rules.", { strong: true });
 

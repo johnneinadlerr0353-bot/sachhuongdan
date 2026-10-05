@@ -1,4 +1,4 @@
-# Digital Detox: Restoring Balance in Vietnam's Digital Age
+# The Calm Dividend: Digital Detox and the Future of Banking in Vietnam
 
 ABrighter Research, Research Intelligence report (October 2026, data to 30 September 2026).
 Vietnam edition of a digital detox study: platform design, health effects, policy (Decree 147/2024, Ho Chi Minh City

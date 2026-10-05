@@ -89,7 +89,7 @@ exhibit({
 });
 
 // ============================================================ INTRODUCTION
-section({ id: "intro", title: "Introduction", eyebrow: "01" });
+section({ id: "intro", title: "A Nation Always Online", eyebrow: "01" });
 
 keymsg("Vietnam has gone further into the digital world than most of the region. The first signs of a deliberate step back are now appearing.", [
   "Social media reaches 77.6% of Vietnamese, eight points above the world average.",
@@ -122,7 +122,7 @@ p("The global data show how fast the idea has spread. In the 2025 Global Digital
 p("This shift matters for commercial banks, which have moved most of their customer relationships onto mobile apps. Less time online could mean fewer digital touchpoints and less room to sell. It could also open demand for products that respect customers' time and well-being. This report explains how platforms capture attention, why digital detox matters, how society and the state in Vietnam are responding and what this means for digital banking.");
 
 // ============================================================ DESIGN
-section({ id: "design", title: "How Social Media Platforms Are Designed to Maximise Engagement", eyebrow: "02" });
+section({ id: "design", title: "Engineered to Hold Attention", eyebrow: "02" });
 
 keymsg("Heavy use is not only a matter of willpower. Platforms are engineered to bring users back more often and keep them longer.", [
   "Four design mechanisms do most of the work: unpredictable rewards, endless feeds, red badges and personalised algorithms.",
@@ -145,7 +145,7 @@ box({
 });
 
 box({
-  label: "Box 1", title: "What is the dopamine loop?",
+  label: "Box 1", title: "Inside the habit machine",
   blocks: [
     { t: "p", text: "**Dopamine plays a central role in the brain's reward system.** It is released when a person feels pleasure or expects a reward. The dopamine loop is a cycle in which rewarding experiences reinforce behaviour and make it more likely to be repeated. It has four stages.[^dopamine]" },
     { t: "img", img: "il_loop", dir: "illus", width: 560 },
@@ -176,7 +176,7 @@ box({
 });
 
 // ============================================================ WHAT / WHY
-section({ id: "why", title: "What Is Digital Detox and Why Does It Matter?", eyebrow: "03" });
+section({ id: "why", title: "The Case for Switching Off", eyebrow: "03" });
 
 keymsg("Digital detox is a deliberate break from screens. It matters because heavy use carries real costs to the mind, the body and relationships.", [
   "The evidence links heavy social media use to depression, poor sleep, eye strain, shorter attention and weaker relationships.",
@@ -213,7 +213,7 @@ p("**Digital detox can be practised in many ways.** Common approaches include li
 p("**Ultimately, digital detox does not mean rejecting technology.** It means finding a healthy balance between online and offline life so that people keep the benefits of digital tools while limiting their long-term cost to physical and mental health.");
 
 // ============================================================ ADVANCING
-section({ id: "policy", title: "Advancing Digital Detox: From Social Awareness to Public Policy", eyebrow: "04" });
+section({ id: "policy", title: "From Personal Choice to Public Rules", eyebrow: "04" });
 
 keymsg("Digital detox has moved from personal choice to product design and public policy. Vietnam is now part of that shift.", [
   "Companies are turning disconnection into a product feature or a brand campaign.",
@@ -245,7 +245,7 @@ mech({
 p("The next step concerns social media itself. In July 2026 the Ministry of Culture, Sports and Tourism published a draft decree that would have barred children under 16 from posting, commenting or reacting on social media. Following consultation, the draft reported in September 2026 does not ban under-16s. It requires parents to register and supervise their accounts and bars children under 13 from posting, commenting or sharing.[^draft_2026] Platforms would have to identify child users and filter harmful content. The decree is not yet final. Its direction is clear, however: Vietnam is choosing supervised access rather than prohibition.");
 
 box({
-  label: "Box 2", title: "Young people and social media",
+  label: "Box 2", title: "Children first: the global push for age limits",
   blocks: [
     { t: "p", text: "**Young people spend more time on social media than any other age group,** which makes them especially vulnerable to cyberbullying, inappropriate content, misinformation, scams and other online crime. These risks can affect mental health and development for years. In response a growing number of countries have restricted access to social media for children. Australia was the first to legislate a ban for under-16s. Indonesia was the first in Southeast Asia to adopt similar measures." },
     { t: "exhibit", n: 6, img: "ex_age", dir: "charts", title: "Teenagers spend three times as long on social media each day as adults over 50", source: "Digital Web Solutions; ABrighter Research" },
@@ -263,7 +263,7 @@ box({
 });
 
 // ============================================================ BANKING
-section({ id: "banking", title: "The Implications of Digital Detox for Digital Banking in Vietnam", eyebrow: "05" });
+section({ id: "banking", title: "Banking in a Detox Era", eyebrow: "05" });
 
 keymsg("Digital detox will not reduce the need for banking. It will change what customers reward: value per minute rather than minutes per session.", [
   "Vietnam's banking has moved onto the phone faster than almost anywhere, which raises the stakes.",
@@ -347,7 +347,7 @@ table({
 p("As customers put more weight on digital well-being, **the institutions that succeed will be those that design digital services around a deep understanding of changing expectations.** By offering experiences that are simple, personal and respectful of people's time and attention, banks can raise satisfaction, strengthen long-term relationships and build more lasting loyalty.");
 
 // ============================================================ VIEW
-section({ id: "view", title: "ABrighter Research View", eyebrow: "06" });
+section({ id: "view", title: "The ABrighter Perspective", eyebrow: "06" });
 
 callout("We expect the search for balance between online and offline life to become one of the defining consumer trends in Vietnam over the next few years. More customers will choose selective disconnection: not following every update and not joining every conversation. This is the Joy of Missing Out (JOMO). Customers will spend less time on social media and more on offline activities. For banks the question is no longer how to win more of the customer's time. It is how to give more value in less of it.", { strong: true });
 

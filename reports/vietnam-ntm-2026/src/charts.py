@@ -1,4 +1,4 @@
-"""Exhibits for 'Non-Tariff Measures: Impacts and Challenges for Vietnam' (ABrighter Research).
+"""Exhibits for 'Beyond Tariffs: How Europe's Rules Are Reshaping Vietnam's Exports' (ABrighter Research).
 
 Every number below is either sourced (see data notes in the report) or derived
 with the arithmetic shown here. Derived values are labelled [Inference] in the text.

@@ -1,4 +1,4 @@
-"""Charts and diagrams for 'Digital Detox: Restoring Balance in Vietnam's Digital Age' (ABrighter Research).
+"""Charts and diagrams for 'The Calm Dividend: Digital Detox and the Future of Banking in Vietnam' (ABrighter Research).
 
 Run from the report folder: PYTHONPATH=src python3 src/charts.py
 """
