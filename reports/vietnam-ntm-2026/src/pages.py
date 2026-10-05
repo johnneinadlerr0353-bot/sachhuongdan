@@ -1,0 +1,16 @@
+"""Find the page on which each section opens in the rendered PDF (for the Contents page)."""
+import subprocess, json, sys
+pdf = sys.argv[1]
+n = int([l for l in subprocess.run(["pdfinfo", pdf], capture_output=True, text=True).stdout.splitlines() if l.startswith("Pages")][0].split()[-1])
+keys = {"exec": "EXECUTIVE SUMMARY", "intro": "Introduction", "overview": "Overview of the European Union",
+        "analysis": "Analysis of the Impacts of Non-Tariff", "summary": "Summary of Impact Levels and Policy",
+        "view": "ABrighter Research View", "refs": "References", "appendix": "Appendix"}
+pages = {}
+for i in range(3, n + 1):
+    t = subprocess.run(["pdftotext", "-f", str(i), "-l", str(i), pdf, "-"], capture_output=True, text=True).stdout
+    head = " ".join(t.strip().splitlines()[:7])
+    for k, v in keys.items():
+        if k not in pages and v in head:
+            pages[k] = i
+print(pages)
+json.dump(pages, open(sys.argv[2], "w"))
